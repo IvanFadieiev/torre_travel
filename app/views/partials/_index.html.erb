@@ -1,0 +1,52 @@
+<h1>Жилье в наличии</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Тип жилья</th>
+      <th>Цена жилья</th>
+      <th>Расстояние доя моря</th>
+      <th>Описание</th>
+      <th>Язык</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @torre_travels.each do |torre_travel| %>
+      <tr>
+        <td>
+          <%if torre_travel.housing == "house" %>
+            <%= "Дом" %>
+          <%elsif torre_travel.housing == "flat"%>
+            <%= "Квартира"%>
+          <%elsif torre_travel.housing == "bungalo"%>
+            <%= "Бунгало"%>
+          <%else%>
+            <%= "Челет"%>
+          <%end%>
+        </td>
+        <td><%= torre_travel.price %> €</td>
+        <td>
+          <%if torre_travel.distance == "first_line" %>
+            <%= "1ая линия" %>
+          <%else%>
+            <%= " 2ая линия"%>
+          <%end%>
+        </td>
+        <td><%= torre_travel.description %></td>
+        <td>
+          <%if torre_travel.lang == "es" %>
+            <%= "Испанский язык" %>
+          <%else%>
+            <%= "Русский язык"%>
+          <%end%>
+        </td>
+        <td><%= link_to 'Показать', torre_travel %></td>
+        <td><%= link_to 'Правка', edit_torre_travel_path(torre_travel) %></td>
+        <td><%= link_to 'Удалить', torre_travel, method: :delete, data: { confirm: 'Уверен?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

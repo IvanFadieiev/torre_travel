@@ -1,0 +1,46 @@
+ <div class="show">
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Тип жилья: </strong>
+    <%if @torre_travel.housing == "house" %>
+      <%= "Дом" %>
+    <%elsif @torre_travel.housing == "flat"%>
+      <%= "Квартира"%>
+    <%elsif @torre_travel.housing == "bungalo"%>
+      <%= "Бунгало"%>
+    <%else%>
+      <%= "Челет"%>
+    <%end%>
+  </p>
+
+  <p>
+    <strong>Цена жилья: </strong>
+    <%= @torre_travel.price %> €
+  </p>
+
+  <p>
+    <strong>Расстояние до моря: </strong>
+    <%if @torre_travel.distance == "first_line" %>
+      <%= "1ая линия" %>
+    <%else%>
+      <%= " 2ая линия"%>
+    <%end%>
+  </p>
+
+  <p>
+    <strong>Описание: </strong>
+    <%= @torre_travel.description %>
+  </p>
+
+  <p>
+    <strong>Язык: </strong>
+    <%if @torre_travel.lang == "es" %>
+      <%= "Испанский язык" %>
+    <%else%>
+      <%= "Русский язык"%>
+    <%end%>
+  </p>
+
+  <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
+  <%= link_to 'Вернуться', torre_travels_path %>
+</div>
