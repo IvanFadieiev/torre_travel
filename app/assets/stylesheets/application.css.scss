@@ -15,4 +15,4 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-input[type=submit] {@extend .btn; @extend .btn-success;}
+input[type=submit] {@extend .btn ; @extend .btn-primary;}
