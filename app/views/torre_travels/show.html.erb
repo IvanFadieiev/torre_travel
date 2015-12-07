@@ -37,7 +37,7 @@
     <strong>Описание на исп: </strong>
     <%= @torre_travel.description_es %>
   </p>
-<%if signed_in?%>
+
 <br>
 <br>
 <table>
@@ -52,11 +52,15 @@
     <tr>
         <td><%= image.id%></td>
         <td><%= image.description%></td>
+        <%if signed_in?%>
+          <td><%=link_to 'Правка', edit_torre_travel_image_path(@torre_travel.id, image)%></td>
+          <td><%= link_to "Destroy", image, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %></td>
+          <%end%>
         <%end%>
     </tr>
   </tbody>
 </table>
-
+<%if signed_in?%>
   <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
       <%= render partial: "image/form", locals:{ f: f} %>
     <p>

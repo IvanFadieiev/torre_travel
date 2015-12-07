@@ -24,6 +24,7 @@ class TorreTravelsController < ApplicationController
 
   # GET /torre_travels/1/edit
   def edit
+    # @image = Image.find(params[:id])
   end
 
   # POST /torre_travels
@@ -46,6 +47,7 @@ class TorreTravelsController < ApplicationController
   # PATCH/PUT /torre_travels/1
   # PATCH/PUT /torre_travels/1.json
   def update
+    # @image = Image.find(params[:id])
     if signed_in?
       respond_to do |format|
         if @torre_travel.update(torre_travel_params)
@@ -64,6 +66,7 @@ class TorreTravelsController < ApplicationController
   # DELETE /torre_travels/1
   # DELETE /torre_travels/1.json
   def destroy
+    # @image = Image.find(params[:id])
     @torre_travel.destroy
     respond_to do |format|
       format.html { redirect_to torre_travels_url, notice: 'Torre travel was successfully destroyed.' }
