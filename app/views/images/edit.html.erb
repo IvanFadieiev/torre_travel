@@ -1,0 +1,7 @@
+<h1>Edit image:</h1>
+  <%= form_for([@torre_travel,@image]) do |f| %>
+  <%= render partial: "images/form", locals:{ f: f} %>
+  <p>
+      <%= f.submit "Обновить рисунок"%>
+  </p>
+<% end %>

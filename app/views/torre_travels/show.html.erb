@@ -37,30 +37,34 @@
     <strong>Описание на исп: </strong>
     <%= @torre_travel.description_es %>
   </p>
-<%if signed_in?%>
-<br>
-<br>
-<table>
-  <thead>
-    <tr>
-      <th>Image ID:</th>
-      <th>Description to image:</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @torre_travel.images.each do |image|%>
-    <tr>
-        <td><%= image.id%></td>
-        <td><%= image.description%></td>
-        <%end%>
-    </tr>
-  </tbody>
-</table>
 
+<br>
+<br>
+<%if @torre_travel.images.any?%>
+  <table>
+    <thead>
+      <tr>
+        <th>Описание:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @torre_travel.images.each do |image|%>
+      <tr>
+          <td><%= image.description%></td>
+          <%if signed_in?%>
+            <td><%=link_to 'Правка', edit_torre_travel_image_path(@torre_travel.id, image)%></td>
+            <td><%= link_to "Destroy", image, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %></td>
+            <%end%>
+          <%end%>
+      </tr>
+    </tbody>
+  </table>
+<%end%>
+<%if signed_in?%>
   <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
-      <%= render partial: "image/form", locals:{ f: f} %>
+      <%= render partial: "images/form", locals:{ f: f} %>
     <p>
-    <%= f.submit %>
+    <%= f.submit "Добавить рисунок" %>
     </p>
   <% end %>
   <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
