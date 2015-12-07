@@ -1,4 +1,5 @@
 class TorreTravel < ActiveRecord::Base
+  has_many :images
   enum housing: [:house, :flat, :bungalo, :chelet]
   enum distance: [:first_line, :second_line]
   validates :description, presence: true,

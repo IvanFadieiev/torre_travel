@@ -14,6 +14,7 @@ class TorreTravelsController < ApplicationController
   # GET /torre_travels/1
   # GET /torre_travels/1.json
   def show
+    @torre_travel = TorreTravel.find(params[:id])
   end
 
   # GET /torre_travels/new

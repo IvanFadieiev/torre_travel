@@ -38,6 +38,31 @@
     <%= @torre_travel.description_es %>
   </p>
 <%if signed_in?%>
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Image ID:</th>
+      <th>Description to image:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @torre_travel.images.each do |image|%>
+    <tr>
+        <td><%= image.id%></td>
+        <td><%= image.description%></td>
+        <%end%>
+    </tr>
+  </tbody>
+</table>
+
+  <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
+      <%= render partial: "image/form", locals:{ f: f} %>
+    <p>
+    <%= f.submit %>
+    </p>
+  <% end %>
   <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
 <%end%>
   <%= link_to 'Вернуться', torre_travels_path %>
