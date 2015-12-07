@@ -16,7 +16,7 @@
     <%= f.select(:housing, options_for_select([['Дом', :house], ['Квартира', :flat],['Бунгало',:bungalo],['Челет',:chelet]])) %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label "Цена" %><br>
     <%= f.text_field :price %>
   </div>
   <div class="field">
@@ -24,14 +24,14 @@
     <%= f.select(:distance, options_for_select([['1ая линия', :first_line], ['2ая линия', :second_line]])) %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Описание на русском языке" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label "Выберете язык" %><br>
-    <%= f.select(:lang, options_for_select([['es', :es], ['ru', :ru]])) %>
+    <%= f.label "Описание на испанском языке" %><br>
+    <%= f.text_area :description_es %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Создать" %>
   </div>
 <% end %>

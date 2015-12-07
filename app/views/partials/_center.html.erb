@@ -1,8 +1,7 @@
-<div class="center">
-  <ul align= center>
-    <%= button_to 'Дома', class: "button", :method => :get %><br>
-    <%= button_to 'Квартиры', class: "button", :method => :get %><br>
-    <%= button_to 'Бунгало', class: "button", :method => :get %><br>
-    <%= button_to 'Челеты', class: "button", :method => :get %><br>
-  </ul>
-</div>
+<ul align= center>
+  <h1>Просмотрите жилье в наличии:</h1>
+  <%= link_to 'Дома', housing_path(:housing => "0")%><br>
+  <%= link_to 'Квартиры', housing_path(:housing => "1") %><br>
+  <%= link_to 'Бунгало', housing_path(:housing => "2") %><br>
+  <%= link_to 'Челеты', housing_path(:housing => "3") %><br>
+</ul>

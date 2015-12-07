@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :torre_travels
   resources :sessions, only: [:new, :create, :destroy]
   get 'all_types',   to: 'torre_travels#all_housings'
+  get 'housing',   to: 'torre_travels#housing'
   root 'torre_travels#index'
   resources :users
   match '/signin',  to: 'sessions#new',         via: 'get'

@@ -10,6 +10,7 @@ class TorreTravelsController < ApplicationController
   def all_housings
     @torre_travels = TorreTravel.all
   end
+
   # GET /torre_travels/1
   # GET /torre_travels/1.json
   def show
@@ -30,7 +31,8 @@ class TorreTravelsController < ApplicationController
     @torre_travel = TorreTravel.new(torre_travel_params)
 
     respond_to do |format|
-      if @torre_travel.save
+      if signed_in?
+        @torre_travel.save
         format.html { redirect_to @torre_travel, notice: 'Torre travel was successfully created.' }
         format.json { render :show, status: :created, location: @torre_travel }
       else
@@ -43,14 +45,18 @@ class TorreTravelsController < ApplicationController
   # PATCH/PUT /torre_travels/1
   # PATCH/PUT /torre_travels/1.json
   def update
-    respond_to do |format|
-      if @torre_travel.update(torre_travel_params)
-        format.html { redirect_to @torre_travel, notice: 'Torre travel was successfully updated.' }
-        format.json { render :show, status: :ok, location: @torre_travel }
-      else
-        format.html { render :edit }
-        format.json { render json: @torre_travel.errors, status: :unprocessable_entity }
+    if signed_in?
+      respond_to do |format|
+        if @torre_travel.update(torre_travel_params)
+          format.html { redirect_to @torre_travel, notice: 'Torre travel was successfully updated.' }
+          format.json { render :show, status: :ok, location: @torre_travel }
+        else
+          format.html { render :edit }
+          format.json { render json: @torre_travel.errors, status: :unprocessable_entity }
+        end
       end
+      else
+        redirect_to :root
     end
   end
 
@@ -64,6 +70,10 @@ class TorreTravelsController < ApplicationController
     end
   end
 
+  def housing
+    @torre_travels = TorreTravel.where(housing: params[:housing])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_torre_travel
@@ -72,6 +82,6 @@ class TorreTravelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def torre_travel_params
-      params.require(:torre_travel).permit(:housing, :price, :distance, :description, :lang)
+      params.require(:torre_travel).permit(:housing, :price, :distance, :description, :description_es)
     end
 end

@@ -1,3 +1,4 @@
+ <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
  <div class="show">
   <p id="notice"><%= notice %></p>
   <p>
@@ -28,19 +29,16 @@
   </p>
 
   <p>
-    <strong>Описание: </strong>
+    <strong>Описание на рус: </strong>
     <%= @torre_travel.description %>
   </p>
 
-  <p>
-    <strong>Язык: </strong>
-    <%if @torre_travel.lang == "es" %>
-      <%= "Испанский язык" %>
-    <%else%>
-      <%= "Русский язык"%>
-    <%end%>
+   <p>
+    <strong>Описание на исп: </strong>
+    <%= @torre_travel.description_es %>
   </p>
-
+<%if signed_in?%>
   <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
+<%end%>
   <%= link_to 'Вернуться', torre_travels_path %>
 </div>
