@@ -21,7 +21,11 @@ class ImagesController < ActionController::Base
   def update
     @image = Image.find(params[:id])
     if @image.update(image_params)
+<<<<<<< HEAD
        redirect_to torre_travel_path(@image.torre_travel_id), notice: 'Изображение обновлено!!!'
+=======
+       redirect_to @image.torre_travel, notice: 'Image was updated'
+>>>>>>> master
      else
        render 'edit'
      end
@@ -29,7 +33,11 @@ class ImagesController < ActionController::Base
   def destroy
     @image = Image.find(params[:id])
     if @image.destroy
+<<<<<<< HEAD
       redirect_to :back, notice: 'Изображение удалено!!!'
+=======
+      redirect_to :back, notice: 'Image was successfully delit.'
+>>>>>>> master
     end
   end
 

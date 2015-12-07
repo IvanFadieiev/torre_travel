@@ -40,6 +40,7 @@
 
 <br>
 <br>
+<<<<<<< HEAD
 <%if @torre_travel.images.any?%>
   <table>
     <thead>
@@ -60,6 +61,28 @@
     </tbody>
   </table>
 <%end%>
+=======
+<table>
+  <thead>
+    <tr>
+      <th>Image ID:</th>
+      <th>Description to image:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @torre_travel.images.each do |image|%>
+    <tr>
+        <td><%= image.id%></td>
+        <td><%= image.description%></td>
+        <%if signed_in?%>
+          <td><%=link_to 'Правка', edit_torre_travel_image_path(@torre_travel.id, image)%></td>
+          <td><%= link_to "Destroy", image, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %></td>
+          <%end%>
+        <%end%>
+    </tr>
+  </tbody>
+</table>
+>>>>>>> master
 <%if signed_in?%>
   <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
       <%= render partial: "images/form", locals:{ f: f} %>
