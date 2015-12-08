@@ -74,6 +74,7 @@
   </p>
 <% end %>
   <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
+  <%= link_to 'Удалить', @torre_travel, method: :delete, data: { confirm: 'Уверен?' } %> |
 <%end%>
   <%= link_to 'Вернуться', torre_travels_path %>
 </div>

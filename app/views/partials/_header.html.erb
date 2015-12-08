@@ -1,13 +1,40 @@
-<div class="nav">
+<!-- <div class="nav">
   <ul  class="list-unstyled"> 
-    <li><%= link_to 'Главная стрница', torre_travels_path %></li>
+    <li><%= link_to 'Главная стрница', :root %></li>
     <li><%= link_to 'Просмотреть все', all_types_path %></li>
     <% if signed_in? %>
-        <li><%= link_to 'Новое жилье', new_torre_travel_path %></li>
+        <li><%= link_to 'Новое жилье', new_path %></li>
         <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
       <% else %>
         <li><%= link_to "Sign in", signin_path %></li>
         <%end%>
   </ul>
+</div> -->
+<div class="nav">        
+  <div class="row">
+    <div class="col-md-4">
+      <% if signed_in? %>
+          <%= link_to 'Новое жилье', new_path %>
+          <%= link_to "Sign out", signout_path, method: "delete" %>
+        <% else %>
+          <%= link_to "Sign in", signin_path %>
+          <%end%>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'Главная стрница', :root %>
+      <%= link_to 'Просмотреть все', all_types_path %>
+    </div>
+  </div>
 </div>
-        
+
+
+<!-- <div class="row">
+    <div class="col-md-4">
+        <h2>Левый блок</h2>
+        <p>................</p>
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+        <h2>Правый блок</h2>
+        <p>................</p>
+    </div>
+</div> -->

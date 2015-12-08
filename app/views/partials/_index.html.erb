@@ -39,7 +39,6 @@
           <td><%= link_to 'Показать', torre_travel %></td>
           <%if signed_in?%>
             <td><%= link_to 'Правка', edit_torre_travel_path(torre_travel) %></td>
-            <td><%= link_to 'Удалить', torre_travel, method: :delete, data: { confirm: 'Уверен?' } %></td>
           <%end%>
         </tr>
       <% end %>
