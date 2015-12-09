@@ -1,15 +1,7 @@
 <%= form_for(@torre_travel) do |f| %>
-  <% if @torre_travel.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@torre_travel.errors.count, "error") %> prohibited this torre_travel from being saved:</h2>
-
-      <ul>
-      <% @torre_travel.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.error_messages :header_message => "Ошибка заполнения формы",
+  :message => "Вы должны исправить эти ошибки:",
+  :header_tag => :h3%>
 
   <div class="field">
     <%= f.label  "Тип жилья"%><br>

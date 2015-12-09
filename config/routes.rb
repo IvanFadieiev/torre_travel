@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :images, only: [:edit, :update, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
+  resources :comments
   resources :torre_travels do
     resources :images
   end

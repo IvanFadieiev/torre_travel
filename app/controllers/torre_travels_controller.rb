@@ -1,13 +1,6 @@
 class TorreTravelsController < ApplicationController
   before_action :set_torre_travel, only: [:show, :edit, :update, :destroy]
-
-  def index
-    @torre_travels = TorreTravel.all
-  end
-
-  def all_housings
-    @torre_travels = TorreTravel.all
-  end
+  before_action :all_torre_travels, only: [:index, :all_housings]
 
   def show
     @torre_travel = TorreTravel.find(params[:id])
@@ -22,15 +15,14 @@ class TorreTravelsController < ApplicationController
 
   def create
     @torre_travel = TorreTravel.new(torre_travel_params)
-    respond_to do |format|
-      if signed_in?
-        @torre_travel.save
-        format.html { redirect_to @torre_travel, notice: 'Torre travel was successfully created.' }
-        format.json { render :show, status: :created, location: @torre_travel }
+     if signed_in?
+      if @torre_travel.save
+        redirect_to @torre_travel, notice: 'Жилье успешно создано!'
       else
-        format.html { render :new }
-        format.json { render json: @torre_travel.errors, status: :unprocessable_entity }
+        render 'new'
       end
+    else
+      redirect_to :root
     end
   end
 
@@ -51,10 +43,14 @@ class TorreTravelsController < ApplicationController
   end
 
   def destroy
-    @torre_travel.destroy
-    respond_to do |format|
-      format.html { redirect_to torre_travels_url, notice: 'Torre travel was successfully destroyed.' }
-      format.json { head :no_content }
+    if signed_in?
+      @torre_travel.destroy
+      respond_to do |format|
+        format.html { redirect_to torre_travels_url, notice: 'Torre travel was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to :root
     end
   end
 
@@ -63,6 +59,10 @@ class TorreTravelsController < ApplicationController
   end
 
 private
+    def all_torre_travels
+      @torre_travels = TorreTravel.all
+    end
+
     def set_torre_travel
       @torre_travel = TorreTravel.find(params[:id])
     end
