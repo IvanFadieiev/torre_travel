@@ -1,12 +1,9 @@
 <div class="nav">        
   <div class="row">
     <div class="col-md-4">
-      <% if signed_in? %>
-          <%= link_to 'Новое жилье', new_path %>
-          <%= link_to "Sign out", signout_path, method: "delete" %>
-        <% else %>
-          <%= link_to "Sign in", signin_path %>
-          <%end%>
+      <% unless signed_in? %>
+        <%= link_to "Sign in", signin_path %>
+      <%end%>
     </div>
     <div class="col-md-4">
       <%= link_to 'Главная стрница', :root %>
@@ -15,3 +12,5 @@
     </div>
   </div>
 </div>
+
+
