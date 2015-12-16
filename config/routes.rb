@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get 'new',         to: 'torre_travels#new'
   match '/signin',   to: 'sessions#new',         via: 'get'
   match '/signout',  to: 'sessions#destroy',     via: 'delete'
+  get '/torre_travels/:torre_travel_id/edit/images/:id/edit', to: 'images#edit'
 end

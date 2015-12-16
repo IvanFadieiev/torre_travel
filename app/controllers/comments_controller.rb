@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(comments_params)
     if @comment.save
-      redirect_to :back
+      redirect_to :back, notice: "Отзыв был успешно добавлен!"
     else
       render 'index'
     end
@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     if @comment.destroy
-      redirect_to :back, notice: "Comment was destroyed"
+      redirect_to :back, notice: "Отзыв был успешно удален!"
     end
   end
 

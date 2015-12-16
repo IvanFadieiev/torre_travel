@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+  $('.message').click(function(){
+    $(this).animate({top: -$(this).outerHeight()}, 500);
+  });
+});
+
+$(document).ready(function(){
+  $('#notice').fadeOut(5000);
+});

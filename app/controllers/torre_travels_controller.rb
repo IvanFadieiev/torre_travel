@@ -30,7 +30,7 @@ class TorreTravelsController < ApplicationController
     if signed_in?
       respond_to do |format|
         if @torre_travel.update(torre_travel_params)
-          format.html { redirect_to @torre_travel, notice: 'Torre travel was successfully updated.' }
+          format.html { redirect_to @torre_travel, notice: 'Жилье успешно обновлено!' }
           format.json { render :show, status: :ok, location: @torre_travel }
         else
           format.html { render :edit }
@@ -46,7 +46,7 @@ class TorreTravelsController < ApplicationController
     if signed_in?
       @torre_travel.destroy
       respond_to do |format|
-        format.html { redirect_to torre_travels_url, notice: 'Torre travel was successfully destroyed.' }
+        format.html { redirect_to all_types_path, notice: 'Жилье успешно удалено!' }
         format.json { head :no_content }
       end
     else

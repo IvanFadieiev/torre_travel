@@ -1,8 +1,41 @@
  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
  <div class="show">
-  <p id="notice"><%= notice %></p><br>
+  <%if notice%>
+    <p id="notice"><%= notice %></p>
+  <% end %>
+
+<div class="container-fluid image">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-12"> 
+      <br>
+      <%if @torre_travel.images.any?%>
+        <table>
+          <tbody>
+            <% @torre_travel.images.each do |image|%>
+                <td width="20%"><%= image_tag image.image_of_housing.url(:small) %><br>
+                    <%= image.description%><br>
+                  
+                    <%if signed_in?%>
+                      <%=link_to 'Правка', edit_torre_travel_image_path(@torre_travel.id, image)%>
+                     <%= link_to "Destroy", image, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %>
+                    <%end%>
+                
+              <%end%>
+              </td>
+                <%if @torre_travel.images.count > 4%>
+                  <div class="message error">
+                   <h3><%=flash[:error] = "Должно быть 4 фото!!!"%></h3>
+                  </div>
+                <%end%>
+          </tbody>
+        </table>
+      <%end%>
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-3">
       <p>
         <strong>Тип жилья: </strong>
         <%if @torre_travel.housing == "house" %>
@@ -39,42 +72,33 @@
         <strong>Описание на исп: </strong>
         <%= @torre_travel.description_es %>
       </p>
+      <%if signed_in?%>
+        | <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
+        <%= link_to 'Удалить', @torre_travel, method: :delete, data: { confirm: 'Уверен?' } %> |
+        <%end%><br>
+        <%= link_to 'Вернуться', all_types_path %>
   </div>
-<br>
-<br>
-<%if @torre_travel.images.any?%>
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @torre_travel.images.each do |image|%>
-        <tr>
-          <th><%= image_tag image.image_of_housing.url(:medium) %><br>
-              <%= image.description%><br>
-            
-              <%if signed_in?%>
-                <%=link_to 'Правка', edit_torre_travel_image_path(@torre_travel.id, image)%>
-               <%= link_to "Destroy", image, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %>
-              <%end%>
-          </th>
-        <%end%>
-        </tr>
-    </tbody>
-  </table>
-<%end%>
-
-<%if signed_in?%>
-  <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
-      <%= render partial: "images/form", locals:{ f: f} %>
-  <p>
-    <%= f.submit "Добавить рисунок" %>
-  </p>
-<% end %>
-  <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
-  <%= link_to 'Удалить', @torre_travel, method: :delete, data: { confirm: 'Уверен?' } %> |
-<%end%>
-  <%= link_to 'Вернуться', all_types_path %>
 </div>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%if signed_in?%>
+      <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
+          <%= render partial: "images/form", locals:{ f: f} %>
+      <p>
+        <%= f.submit "Добавить рисунок" %>
+      </p>
+      <% end %>
+    </div>
+  </div>
+<%end%> 
+
+
+
+
+
+
+
+
+
+

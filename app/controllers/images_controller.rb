@@ -9,7 +9,7 @@ class ImagesController < ActionController::Base
     @torre_travel = TorreTravel.find(params[:torre_travel_id])
     @image = @torre_travel.images.build(image_params)
       if @image.save
-        redirect_to :back
+        redirect_to :back, notice: 'Изображение добавлено!!!'
       else
         render 'new'
       end

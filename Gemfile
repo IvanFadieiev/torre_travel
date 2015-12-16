@@ -49,3 +49,4 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bcrypt-ruby', '3.1.2'
 gem "paperclip", "~> 4.3"
 gem "dynamic_form"
+gem 'rmagick', '~> 2.15', '>= 2.15.4'

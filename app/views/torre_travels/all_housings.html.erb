@@ -1,7 +1,8 @@
 <div class="index">
-  <p id="notice"><%= notice %></p>
+    <%if notice%>
+      <p id="notice"><%= notice %></p>
+    <% end %>
       <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    </div>
     <div id="main-index">
       <%= render 'partials/index'%>
     </div>

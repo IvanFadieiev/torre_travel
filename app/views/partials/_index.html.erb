@@ -37,9 +37,6 @@
           <td><%= torre_travel.description %></td>
           <td><%= torre_travel.description_es %></td>
           <td><%= link_to 'Показать', torre_travel %></td>
-          <%if signed_in?%>
-            <td><%= link_to 'Правка', edit_torre_travel_path(torre_travel) %></td>
-          <%end%>
         </tr>
       <% end %>
     </tbody>

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-  <title>torre-travels</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-
-<% if signed_in? %>
-
-  <%=render "partials/panel"%>
-  
-<%end%>
-
-
-<%=render "partials/header"%> 
-
-<%= yield %>
-
-<%=render "partials/footer"%>
-</body>
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <title>torre-travels</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% if signed_in? %>
+      <%=render "partials/panel"%>      
+    <%end%>
+    <%=render "partials/header"%> 
+      <%= yield %>
+    <%=render "partials/footer"%>
+    <div class="admin link">
+      <% unless signed_in? %>
+          <%= link_to "Sign in", signin_path %>
+      <%end%>
+    </div>
+  </body>
 </html>
