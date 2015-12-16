@@ -1,5 +1,5 @@
 class ImagesController < ActionController::Base
-  before_action :find_image, only: [:edit, :update, :destroy]
+  before_action :find_image, only: [:update, :destroy]
   def new
     @image = @torre_travel.imagess.build
     @torre_travel = TorreTravel.find(params[:torre_travel_id])  
@@ -15,16 +15,6 @@ class ImagesController < ActionController::Base
       end
   end
 
-  def edit
-  end
-
-  def update
-    if @image.update(image_params)
-       redirect_to torre_travel_path(@image.torre_travel_id), notice: 'Изображение обновлено!!!'
-     else
-       render 'edit'
-     end
-  end
   def destroy
     if @image.destroy
       redirect_to :back, notice: 'Изображение удалено!!!'

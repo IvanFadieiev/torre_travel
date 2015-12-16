@@ -12,7 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require fotorama
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 input[type=submit] {@extend .btn ; @extend .btn-primary;}
+@import "fotorama"

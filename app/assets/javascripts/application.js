@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require fotorama
+
+
+
 
 
 $(document).ready(function(){
