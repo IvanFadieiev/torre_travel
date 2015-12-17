@@ -2,10 +2,15 @@
 class CommentsController < ApplicationController
   before_action :all_comments, only: [:create, :index]
   def create
-    @comment = Comment.create(comments_params)
-    if @comment.save
-      redirect_to :back, notice: "Отзыв был успешно добавлен!"
+    @comment = Comment.new(comments_params)
+    if valid_captcha?(params[:captcha])
+      if @comment.save
+        redirect_to :back, notice: "Отзыв был успешно добавлен!"
+      else
+        render 'index'
+      end
     else
+      flash[:notice]="asdasd"
       render 'index'
     end
   end

@@ -205,6 +205,7 @@ marquee {
 .sign_in{
   margin-top: 50px;
   margin-left: 20px;
+  width: 98%;
 }
 .user{
   margin-top: 50px;
@@ -260,18 +261,6 @@ marquee {
       background-color: #61b832;
       border-color: #55a12c;
    }
-// #error{
-//      background-color: #de4343;
-//      border-color: #c43d3d;
-// }
-// #success{
-//      background-color: #61b832;
-//      border-color: #55a12c;
-// }
-
-// #message h3{
-//      margin: 0 0 5px 0;
-// }
 
 // вид строк ввода
 input, textarea, select, .uneditable-input {

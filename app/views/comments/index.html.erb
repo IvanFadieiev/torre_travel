@@ -20,6 +20,8 @@
       <p>
         <%= f.text_area :body, placeholder: "Комментарий...", rows: 6 %>
       </p>
+      <center><p><%= captcha_tag %></p></center>
+      <p><%= text_field_tag :captcha %></p>
       <p>
       <%= f.submit "Написать" %>
       </p>

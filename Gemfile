@@ -52,3 +52,4 @@ gem "dynamic_form"
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem 'fotorama-rails'
 gem "fotoramajs"
+gem 'easy_captcha'
