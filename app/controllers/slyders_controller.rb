@@ -1,4 +1,5 @@
 class SlydersController < ApplicationController
+  before_action :find_slyder, only: [:edit, :update, :destroy]
   def new
     @slyder = Slyder.new
     @slyders = Slyder.all
@@ -6,30 +7,39 @@ class SlydersController < ApplicationController
   
   def create 
     @slyder = Slyder.create(slyder_params)
-    if @slyder.save
-      redirect_to :back, notice: "Слайдер удачно сохранено!!!"
+    if signed_in?
+      if @slyder.save
+        redirect_to :back, notice: "Слайдер удачно сохранено!!!"
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      redirect_to :root
     end
   end
 
   def edit
-    @slyder = Slyder.find(params[:id])
   end
 
   def update
-    @slyder = Slyder.find(params[:id])
-    if @slyder.update(slyder_params)
-      redirect_to new_slyder_path, notice: "Слайдер успешно обновлен!!!"
+    if signed_in?
+      if @slyder.update(slyder_params)
+        redirect_to new_slyder_path, notice: "Слайдер успешно обновлен!!!"
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      redirect_to :root
     end
   end
 
   def destroy
-  @slyder = Slyder.find(params[:id])
-    if @slyder.destroy
-      redirect_to :back, notice: 'Слайдер удален!!!'
+    if signed_in?
+      if @slyder.destroy
+        redirect_to :back, notice: 'Слайдер удален!!!'
+      end
+    else
+      redirect_to :root
     end
   end
     
@@ -38,6 +48,10 @@ class SlydersController < ApplicationController
   end
   
   private
+  def find_slyder
+    @slyder = Slyder.find(params[:id])
+  end
+
   def slyder_params
     params.require(:slyder).permit(:description, :poster)
   end

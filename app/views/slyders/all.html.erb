@@ -1,4 +1,7 @@
  <div class="edit">
+ <%if notice%>
+      <p id="notice"><%= notice %></p>
+    <% end %>
   <% @slyders.each do |slyder|%>
     <div class="row">
       <div class="col-md-5">

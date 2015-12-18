@@ -8,7 +8,7 @@ body {
 
 p, ol, ul, td {
   font-family: 'Lobster';
-  font-size: 13px;
+  font-size: 18px;
   line-height: 18px;
 }
 
@@ -18,21 +18,46 @@ pre {
   font-size: 11px;
 }
 
+
+// ССЫЛКИ!!!!!!!!!!!!! 
 a {
   font-family: 'Lobster';
-  color: #000;
+  color: #B22222;
   font-size: 20px;
   text-decoration: none;
-
-  &:visited {
-    color: #666;
+}
+  a:visited {
+    color: #B22222;
   }
 
-  &:hover {
+  td a:hover {
     color: black;
-    // background-color: #FFD700;
+  }
+  ul a:hover {
+    color: black;}
+.nav  a:hover {
+    color: black;
+  }
+
+.admin.link{
+  position: fixed;
+  bottom: 0;
+  font-size: 12px; color: #9C9C9C;
+  right: 5px;
+  a {
+  color: #9C9C9C;
+  font-size: 12px;
+  text-decoration: none;
+  }
+  a:visited {
+    color: #9C9C9C;
+  }
+  a:hover {
+    color: #9C9C9C;
   }
 }
+//ССЫЛКИ!!!!!!!!!!!!
+
 
 div {
   &.field, &.actions {
@@ -42,7 +67,7 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: #B22222;
   display: table;
 }
 
@@ -52,7 +77,7 @@ div {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #B22222;
 
   h2 {
     text-align: left;
@@ -72,7 +97,7 @@ div {
 }
 .nav{
   text-align: center;
-  background-color: #FFE173;
+  background-color: #FFD700;
   padding: 10px;
   position: fixed; 
   left: 0;
@@ -221,7 +246,7 @@ marquee {
 }
 
 #notice {
-  
+    z-index:6;
     -webkit-background-size: 40px 40px;
     -moz-background-size: 40px 40px;
     background-size: 40px 40px;
@@ -258,7 +283,7 @@ marquee {
     text-shadow: 0 1px 0 rgba(0,0,0,.5);
      -webkit-animation: animate-bg 5s linear infinite;
      -moz-animation: animate-bg 5s linear infinite;
-      background-color: #61b832;
+      background-color: #B22222;
       border-color: #55a12c;
    }
 
@@ -272,12 +297,7 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-.admin.link{
-  position: fixed;
-  bottom: 0;
-  font-size: 12px; color: green;
-  right: 5px;
-}
+
 .new_comment{
   width: 98%;
 }
