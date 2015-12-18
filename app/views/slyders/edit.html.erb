@@ -1,0 +1,22 @@
+<div class="edit">
+  <div class="slyder-new">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <%= form_for(@slyder) do |f| %>
+          <p>
+            <%= f.label "Описание фото" %><br>
+          </p>
+          <p>
+            <%= f.text_area :description, rows: 9%>
+          </p>
+          <p>
+            <%= f.file_field :poster %>
+          </p>
+          <p>
+            <%= f.submit "Обновить рисунок" %>
+          </p>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209113701) do
+ActiveRecord::Schema.define(version: 20151218090310) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 20151209113701) do
   end
 
   add_index "images", ["torre_travel_id"], name: "index_images_on_torre_travel_id"
+
+  create_table "slyders", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
+  end
 
   create_table "torre_travels", force: :cascade do |t|
     t.integer  "housing"

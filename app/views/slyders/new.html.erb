@@ -1,0 +1,35 @@
+<div class="edit">
+  <div class="slyder-new">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <%= form_for(@slyder) do |f| %>
+          <p>
+            <%= f.label "Описание фото" %><br>
+          </p>
+          <p>
+            <%= f.text_area :description, rows: 9%>
+          </p>
+          <p>
+            <%= f.file_field :poster %>
+          </p>
+          <p>
+            <%= f.submit "Добавить рисунок" %>
+          </p>
+        <%end%>
+      </div>
+    </div><br><br>
+    <% @slyders.each do |slyder|%>
+    <div class="row">
+    <div class="col-md-4 col-md-offset-3">
+      <%= slyder.description%><br><br>
+      <%= image_tag slyder.poster.url(:small) %><span style='padding-left:20px;'></span>
+    </div>
+    <div class="col-md-1">
+      <br><br><br>
+      <%= link_to "Destroy", slyder, method: :delete, data: { confirm: "Вы уверенны?"}, :class => 'deleteAction' %>
+      <%= link_to 'Правка', edit_slyder_path(slyder) %><br><br>
+    </div>
+    </div>
+    <%end%>
+  </div>
+</div>

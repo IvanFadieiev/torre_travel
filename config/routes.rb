@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # get 'users/administration'
   root 'torre_travels#index'
   resources :users
+  resources :slyders, path: 'sights'
   resources :images, only: [:edit, :update, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
   resources :comments

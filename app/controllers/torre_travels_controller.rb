@@ -10,6 +10,10 @@ class TorreTravelsController < ApplicationController
     @torre_travel = TorreTravel.new
   end
 
+  def index
+    @slyders = Slyder.all  
+  end
+
   def edit
   end
 

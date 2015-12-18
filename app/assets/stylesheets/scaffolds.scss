@@ -77,7 +77,8 @@ div {
   position: fixed; 
   left: 0;
   top: 0;  
-  width: 100%; 
+  width: 100%;
+  z-index:5;
 }
 
 .nav ul li {
@@ -90,9 +91,8 @@ div {
     display: block; /* Блочный элемент (для старых браузеров) */
     text-align: center; /* Выравнивание по центру */
     font-style: italic; /* Курсивное начертание */
-    margin-top: 100px; /* Отступ сверху */
+    margin-top: 55px; /* Отступ сверху */
     margin-bottom: 5px; /* Отступ снизу */
-    color: #666; /* Цвет подрисуночной подписи */
    }
 
 #top {
