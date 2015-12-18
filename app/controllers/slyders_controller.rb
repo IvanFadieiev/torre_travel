@@ -33,6 +33,10 @@ class SlydersController < ApplicationController
     end
   end
     
+  def all
+    @slyders = Slyder.all
+  end
+  
   private
   def slyder_params
     params.require(:slyder).permit(:description, :poster)

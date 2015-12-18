@@ -1,0 +1,14 @@
+ <div class="edit">
+  <% @slyders.each do |slyder|%>
+    <div class="row">
+      <div class="col-md-5">
+        <%= image_tag slyder.poster.url(:small) %><br><br>
+        </div>
+      <div class="col-md-6 col-md-offset-1">
+        <p>
+          <%= slyder.description%><br><br>
+        </p>
+      </div>
+    </div>
+  <%end%>
+</div>
