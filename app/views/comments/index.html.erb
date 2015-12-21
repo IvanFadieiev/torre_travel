@@ -11,20 +11,20 @@
     <%= f.error_messages :header_message => "Ошибка заполнения формы",
   :message => "Вы должны исправить эти ошибки:",
   :header_tag => :h3%>
-      <p>
+      <div class="field">
         <%=f.text_area :name, placeholder: "Ваше имя..."%>
-      </p>
-      <p>
+      </div>
+      <div class="field">
         <%=f.email_field :email, placeholder: "Ваш email..."%>
-      </p>
-      <p>
+      </div>
+      <div class="field">
         <%= f.text_area :body, placeholder: "Комментарий...", rows: 6 %>
-      </p>
-      <center><p><%= captcha_tag %></p></center>
-      <p><%= text_field_tag :captcha %></p>
-      <p>
+      </div>
+      <center><div class="field"><%= captcha_tag %></div></center>
+      <div class="field"><%= text_field_tag :captcha %></div>
+      <div class="field">
       <%= f.submit "Написать" %>
-      </p>
+      </div>
     <% end %>
   </div>   
 </div>

@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
         render 'index'
       end
     else
-      flash[:notice]="asdasd"
+      flash[:notice]="Не правильно введен код с картинки!"
       render 'index'
     end
   end

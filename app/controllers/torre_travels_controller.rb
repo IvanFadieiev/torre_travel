@@ -62,6 +62,9 @@ class TorreTravelsController < ApplicationController
     @torre_travels = TorreTravel.where(housing: params[:housing])
   end
 
+  def service  
+  end
+
 private
     def all_torre_travels
       @torre_travels = TorreTravel.all

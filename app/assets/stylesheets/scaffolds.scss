@@ -34,8 +34,18 @@ a {
     color: black;
   }
   ul a:hover {
-    color: black;}
-.nav  a:hover {
+    color: black;
+  }
+  .nav  a:hover {
+    color: black;
+  }
+  #main-right p a:hover {
+    color: black;
+  }
+  .show a:hover {
+    color: black;
+  }
+  .edit a:hover {
     color: black;
   }
 
@@ -56,6 +66,8 @@ a {
     color: #9C9C9C;
   }
 }
+
+
 //ССЫЛКИ!!!!!!!!!!!!
 
 
@@ -106,8 +118,9 @@ div {
   z-index:5;
 }
 
-.nav ul li {
+.nav li {
     display: inline;
+    padding-left: 20px;
    }
 
 .spain{
@@ -116,8 +129,8 @@ div {
     display: block; /* Блочный элемент (для старых браузеров) */
     text-align: center; /* Выравнивание по центру */
     font-style: italic; /* Курсивное начертание */
-    margin-top: 55px; /* Отступ сверху */
-    margin-bottom: 5px; /* Отступ снизу */
+    margin-top: 40px; /* Отступ сверху */
+    margin-bottom: 15px; /* Отступ снизу */
    }
 
 #top {
@@ -238,6 +251,7 @@ marquee {
 }
 
 .panel{
+  margin-top: 8px;
   position: fixed;
   z-index: 1000;
   right: 0;
@@ -300,4 +314,9 @@ input, textarea, select, .uneditable-input {
 
 .new_comment{
   width: 98%;
+}
+
+//при ошибочном заполнении формы input уменьшался
+.field_with_errors{
+  width: 100%;
 }

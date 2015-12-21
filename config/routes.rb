@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :torre_travels do
     resources :images
   end
+  get 'service',     to: 'torre_travels#service'
   get 'sights',      to: 'slyders#all'
   get 'all_types',   to: 'torre_travels#all_housings'
   get 'housing',     to: 'torre_travels#housing'

@@ -11,7 +11,7 @@
       <p>
         <strong>Тип жилья: </strong>
         <%if @torre_travel.housing == "house" %>
-          <%= "Дом" %>
+          <%= "Апартаменты" %>
         <%elsif @torre_travel.housing == "flat"%>
           <%= "Квартира"%>
         <%elsif @torre_travel.housing == "bungalo"%>
@@ -55,12 +55,8 @@
     <div class="col-md-4 col-md-offset-4">
       <%if signed_in?%>
         <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
-          <p>
-            <%= f.file_field :image_of_housing %>
-          </p>
-          <p>
-            <%= f.submit "Добавить рисунок" %>
-          </p>
+        <%= f.file_field :image_of_housing %>
+        <%= f.submit "Добавить рисунок" %>
         <% end %>
       <%end%>
     </div>
