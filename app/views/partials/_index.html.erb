@@ -1,47 +1,42 @@
 <%if @torre_travels.any?%>
-  <h1>Жилье в наличии</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Тип жилья</th>
-        <th>Цена жилья</th>
-        <th>Расстояние доя моря</th>
-        <th>Описание рус</th>
-        <th>Описание исп</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @torre_travels.each do |torre_travel| %>
-        <tr>
-          <td>
-            <%if torre_travel.housing == "house" %>
-              <%= "Апартаменты" %>
-            <%elsif torre_travel.housing == "flat"%>
-              <%= "Квартира"%>
-            <%elsif torre_travel.housing == "bungalo"%>
-              <%= "Бунгало"%>
-            <%else%>
-              <%= "Челет"%>
-            <%end%>
-          </td>
-          <td><%= torre_travel.price %> €</td>
-          <td>
-            <%if torre_travel.distance == "first_line" %>
-              <%= "1ая линия" %>
-            <%else%>
-              <%= " 2ая линия"%>
-            <%end%>
-          </td>
-          <td><%= torre_travel.description %></td>
-          <td><%= torre_travel.description_es %></td>
-          <td><%= link_to 'Показать', torre_travel %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div id="wrapper">
+  <div id="contentArea">
+    <div id="primaryContent">
+    <% @torre_travels.each do |torre_travel| %>
+      <div class="portfolioBox">
+        <%=link_to (image_tag torre_travel.images.first.image_of_housing.url(:small)), torre_travel%>
+        <h3>
+          <%if torre_travel.housing == "house" %>
+            <%= "Апартаменты" %>
+          <%elsif torre_travel.housing == "flat"%>
+            <%= "Квартира"%>
+          <%elsif torre_travel.housing == "bungalo"%>
+            <%= "Бунгало"%>
+          <%else%>
+            <%= "Челет"%>
+          <%end%>
+        </h3>
+        <%= torre_travel.price %> €<br>
+        <%if torre_travel.distance == "first_line" %>
+          <%= "1ая линия" %>
+        <%else%>
+          <%= " 2ая линия"%>
+        <%end%>
+        <p>
+          <%= torre_travel.description %>
+        </p>
+        <p>
+          <%= torre_travel.description_es %>
+        </p>
+      </div>     
+      <%end%>
+    </div>
+    <div id="secondaryContent">
+    <%= render partial: "partials/service" %>
+    </div>
+  </div>
   <br> 
+</div>
 <%else%>
   <h1>Извините, такого жилья временно нет в наличии!</h1>
 <%end%>

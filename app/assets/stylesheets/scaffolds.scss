@@ -1,13 +1,11 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: 'Lobster';
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: 'Lobster';
   font-size: 18px;
   line-height: 18px;
 }
@@ -20,33 +18,30 @@ pre {
 
 
 // ССЫЛКИ!!!!!!!!!!!!! 
-a {
-  font-family: 'Lobster';
-  color: #B22222;
-  font-size: 20px;
-  text-decoration: none;
-}
-  a:visited {
-    color: #B22222;
+a, ul a, #top-right a, .col-md-2 a, .show a,.new a{margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
+// {
+//   color: #B22222;
+//   font-size: 20px;
+//   text-decoration: none;
+// }
+  a, #top-right a,ul a:visited {
+    color:#BD0A1C;
   }
 
-  td a:hover {
-    color: black;
+  td a,#top-right a:hover {
+    color:#FEC300;
   }
   ul a:hover {
-    color: black;
+    color:#FEC300;
   }
   .nav  a:hover {
-    color: black;
-  }
-  #main-right p a:hover {
-    color: black;
+    color:#FEC300;
   }
   .show a:hover {
-    color: black;
+    color: #FEC300;
   }
   .edit a:hover {
-    color: black;
+    color: #FEC300;
   }
 
 .admin.link{
@@ -107,34 +102,35 @@ div {
     list-style: square;
   }
 }
-.nav{
-  text-align: center;
-  background-color: #FFD700;
-  padding: 10px;
-  position: fixed; 
-  left: 0;
-  top: 0;  
-  width: 100%;
-  z-index:5;
-}
 
-.nav li {
-    display: inline;
-    padding-left: 20px;
-   }
+// HEADER
 
+// .nav{
+//   text-align: center;
+//   background-color: #FFD700;
+//   padding: 10px;
+//   position: fixed; 
+//   left: 0;
+//   top: 0;  
+//   width: 100%;
+//   z-index:5;
+// }
+
+// .nav li {
+//     display: inline;
+//     padding-left: 20px;
+//    }
+
+//slyder
 .spain{
     margin:0px;
     padding:0px;
     display: block; /* Блочный элемент (для старых браузеров) */
     text-align: center; /* Выравнивание по центру */
     font-style: italic; /* Курсивное начертание */
-    margin-top: 40px; /* Отступ сверху */
-    margin-bottom: 15px; /* Отступ снизу */
    }
 
 #top {
-  font-family: 'Lobster';
   h1{
     text-indent: 45px;
     text-shadow: 0 1px 0 #ccc,
@@ -151,59 +147,16 @@ div {
                  0 20px 20px rgba(0,0,0,.15);
     }
   #top-text{
-    font-family: 'Lobster';
     margin-left: 1%;;
     text-indent: 15px;
     float:center;
     width:98%;
     height: 100%;
-    margin-bottom: 50px;
     line-height: 25px;
     font-size: 19px;
   }
 }
 
-#main-left { 
-  width: 19%; 
-  float: left;
-  font-family: 'Lobster';
-  margin-left: 1%; 
-}
-#main-center {
-  width: 53%; 
-  float: left;
-  margin-right: 1%;
-  margin-left: 1%;
-  h1{
-    font-family: 'Lobster';
-    text-align: center;
-  }
-  table {
-    border-collapse: separate; 
-    width: 100%; 
-    border-spacing: 7px 11px;
-   }
-  ul{
-    font-family: 'Lobster';
-  }
-}
-#main-index { 
-  table {
-    border-collapse: separate; 
-    width: 50%; 
-    border-spacing: 7px 11px;
-   }
-  width: 100%;  
-  float: right;
-  font-family: 'Lobster';
-  margin-left: 1%;
-}
-#main-right { 
-  width: 24%; 
-  float: right;
-  font-family: 'Lobster';
-  margin-right: 1%;
-}
 #commercial{
   position: fixed; 
   left: 0;
@@ -215,49 +168,32 @@ marquee {
   direction: right;
 }
 
-.index{
-  margin-top: 50px;
-  width: 100%;
-}
 
-.new{
-  margin-top: 50px;
+.new, .edit, .show{
   margin-left: 20px;
-}
-
-.show{
-  margin-top: 50px;
-  margin-left: 20px;
-  width: 97%;
-}
-
-.edit{
-  margin-top: 50px;
-  margin-left: 20px;
-}
-
-.admin{
-  margin-top: 50px;
-  margin-left: 20px;
-}
-.sign_in{
-  margin-top: 50px;
-  margin-left: 20px;
-  width: 98%;
-}
-.user{
-  margin-top: 50px;
-  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .panel{
-  margin-top: 8px;
+  margin-top: 130px;
   position: fixed;
   z-index: 1000;
   right: 0;
-  width: 20%;
+  width: 22%;
   background-color: #FFE173;
+  a {
+  color: #9C9C9C;
+  font-size: 15px;
+  text-decoration: none;
+  }
+  a:visited {
+    color: #9C9C9C;
+  }
+  a:hover {
+    color: #9C9C9C;
+  }
 }
+
 
 #notice {
     z-index:6;
@@ -312,11 +248,39 @@ input, textarea, select, .uneditable-input {
 }
 
 
-.new_comment{
-  width: 98%;
-}
-
 //при ошибочном заполнении формы input уменьшался
 .field_with_errors{
   width: 100%;
 }
+
+
+
+
+//оформление index
+#wrapper {width:960px;margin:0 auto;padding:0 10px;text-align:left;background:url(../img/wrapper-bg.png) 0 195px no-repeat;}
+#contentArea {clear:both;float:left;padding:20px 30px 40px 20px;width:908px;border-left:1px solid #ddd;border-right:1px solid #ddd;background:#fff url(../img/contentArea-bg.png) 50% 1px no-repeat;}
+#contentArea {width:920px;padding:19px;}
+#primaryContent {float:right;width:560px;}
+#secondaryContent {float:left;width:300px;padding:10px 33px 40px 10px;background:#fff url(../img/secondaryContent-bg.png) 100% 0 no-repeat;}
+#primaryContent .portfolioBox {float:left;width:260px;margin:0 10px 20px 0;padding:10px 10px 30px 10px;background:#eee url(../img/portfolioBox-bg.png) 0 100% no-repeat;border:1px solid white;}
+#primaryContent .portfolioBox img {width:210px;border:1px solid #fafafa;margin:0 0 10px 0;}
+#primaryContent .portfolioBox h3 {margin:0 0 6px 0;}
+#primaryContent .portfolioBox p {color:#444;}
+
+//header
+#header {height:130px;position:relative;padding-left:10px;background:#485558 url(../img/header-bg.png);border-bottom:3px solid #FEC300;}
+#header ul {position:absolute;right:10px;bottom:0px;}
+#header ul li {float:left;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 2px 3px 4px;}
+#header ul li a {display:block;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;}
+#header ul li a:hover {color:#FEC300;}
+
+#header ul li.current {background:#67920D;border-color:red;}
+#header ul li.current a {color:#fff;}
+#header ul li.current a:hover {cursor:default;background:red;}
+
+.navi-description {font-size:.7em;color:#eee;display:block;text-transform:none;padding-top:1px;}
+#header ul li.current .navi-description {color:#fff;}
+#header ul li a:hover .navi-description {color:#fff;}
+
+
+

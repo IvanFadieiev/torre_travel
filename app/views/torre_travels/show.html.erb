@@ -6,7 +6,7 @@
 
   <%= render partial: "partials/image" %>
 
-  <div class="row">
+  <div class="row1">
     <div class="col-md-4 col-md-offset-1">
       <p>
         <strong>Тип жилья: </strong>
@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row1">
     <div class="col-md-4 col-md-offset-4">
       <%if signed_in?%>
         <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>

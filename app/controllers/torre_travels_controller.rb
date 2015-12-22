@@ -2,8 +2,11 @@ class TorreTravelsController < ApplicationController
   before_action :set_torre_travel, only: [:show, :edit, :update, :destroy]
   before_action :all_torre_travels, only: [:index, :all_housings]
 
+  def all_housings
+    
+  end
+
   def show
-    @torre_travel = TorreTravel.find(params[:id])
   end
 
   def new
@@ -11,7 +14,7 @@ class TorreTravelsController < ApplicationController
   end
 
   def index
-    @slyders = Slyder.all  
+    @slyders = Slyder.all
   end
 
   def edit
@@ -63,6 +66,10 @@ class TorreTravelsController < ApplicationController
   end
 
   def service  
+  end
+
+  def image(id)
+    Image.where(torre_travel_id = (:id)).first.image_of_housing.url(:small)
   end
 
 private
