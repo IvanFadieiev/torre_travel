@@ -1,9 +1,9 @@
 body {
   // рисунок на фон
-  // background: url(../img/spain.jpg);
-  // background-size: 100% 100%;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
+  background: url(../img/spain.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-size: 13px;
   line-height: 18px;
 }
@@ -146,6 +146,7 @@ div {
    }
 
 #top {
+  margin-top:-10px;
   h1{
     text-indent: 45px;
     text-shadow: 0 1px 0 #ccc,
@@ -162,6 +163,7 @@ div {
                  0 20px 20px rgba(0,0,0,.15);
     }
   #top-text{
+    padding: 0;
     margin-left: 1%;;
     text-indent: 15px;
     float:center;
@@ -270,7 +272,7 @@ input, textarea, select, .uneditable-input {
 
 
 //оформление index
-#wrapper {width:960px;margin:0 auto;padding:0 10px;text-align:left;background:url(../img/wrapper-bg.png) 0 195px no-repeat;}
+#wrapper {opacity: 0.9;width:960px;margin:0 auto;padding:0 10px;text-align:left;background:url(../img/wrapper-bg.png) 0 195px no-repeat;}
 #contentArea {clear:both;float:left;padding:20px 30px 40px 20px;width:908px;border-left:1px solid #ddd;border-right:1px solid #ddd;background:#fff url(../img/contentArea-bg.png) 50% 1px no-repeat;}
 #contentArea {width:920px;padding:19px;}
 #primaryContent {float:right;width:560px;}
@@ -297,7 +299,9 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #333; /* Параметры рамки */
 
 }
-
+img{
+  opacity: 0.9;
+}
 
 // .line {
 //   opacity: 0;

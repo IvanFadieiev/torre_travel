@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //фон для col
-.col-md-4, .col-md-3, .top {box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; height:190px; background:#eee 0 100%;border:1px solid white;}
-.top {box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; background:#eee 0 100%;border:1px solid white;}
-.edit .row{box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%;margin:0 0 20px 0;padding:10px 10px 10px 10px;background:#eee 0 100%;border:1px solid white;}
+.col-md-4, .col-md-3 {opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; height:209px; background:#eee 0 100%;border:1px solid white;}
+.top { opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; background:#eee 0 100%;border:1px solid white;}
+.edit .row{opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%;margin:0 0 20px 0;padding:10px 10px 10px 10px;background:#eee 0 100%;border:1px solid white;}
+.fotorama{opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; background:#eee 0 100%;border:1px solid white;}
+// .fotorama__nav.fotorama__nav--dots{height}
+
+.row1 .col-md-3{opacity: 0.8; height:100%;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin:0 0 20px 0;padding:10px 10px 10px 10px;background:#eee 0 100%;border:1px solid white;}

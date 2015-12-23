@@ -5,16 +5,16 @@
       <%= link_to "Destroy", image, method: :delete, data: { confirm: "Вы уверенны?"}, :class => 'deleteAction' %>
     <%end%>
   <%else%>
-    <div class="row1">
-      <div class="col-md-2">
-        <%= link_to 'Вернуться', all_types_path %>
+    
+      <div class="col-md-1">
+        <%= link_to 'Назад', all_types_path %>
       </div>
       <div class="col-md-8">
         <div class="fotorama" data-width="768" data-height="576" data-loop="true" data-autoplay="3000">
           <% @torre_travel.images.each do |image|%>
           <%= image_tag image.image_of_housing.url(:large) %>
           <%end%>
-        </div> 
+         
       </div>
     </div>
   <%end%>

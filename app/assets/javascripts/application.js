@@ -32,5 +32,5 @@ $(document).ready(function(){
 
 $(document).ready(function() {
   $(".content").css("display", "none");
-  $(".content").fadeIn("slow");
+  $(".content").fadeIn(800);
 });
