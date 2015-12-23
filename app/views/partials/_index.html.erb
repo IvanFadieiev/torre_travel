@@ -18,16 +18,21 @@
         </h3>
         <%= torre_travel.price %> €<br>
         <%if torre_travel.distance == "first_line" %>
+        <div class="line" data-title="до 1000м до моря">
           <%= "1ая линия" %>
+        </div>
         <%else%>
+        <div class="line" data-title="более 1000м до моря">
           <%= " 2ая линия"%>
+        </div>
         <%end%>
-        <p>
+        
+        <!-- <p>
           <%= torre_travel.description %>
         </p>
         <p>
           <%= torre_travel.description_es %>
-        </p>
+        </p> -->
       </div>     
       <%end%>
     </div>

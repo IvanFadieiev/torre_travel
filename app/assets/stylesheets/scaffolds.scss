@@ -1,6 +1,9 @@
 body {
-  background-color: #fff;
-  color: #333;
+  // рисунок на фон
+  // background: url(../img/spain.jpg);
+  // background-size: 100% 100%;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
   font-size: 13px;
   line-height: 18px;
 }
@@ -18,7 +21,7 @@ pre {
 
 
 // ССЫЛКИ!!!!!!!!!!!!! 
-a, ul a, #top-right a, .col-md-2 a, .show a,.new a{margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
+a, ul a, #top-right a, .col-md-2 a, .show a,.new a{text-decoration: none;cursor:default;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
 // {
 //   color: #B22222;
 //   font-size: 20px;
@@ -30,24 +33,33 @@ a, ul a, #top-right a, .col-md-2 a, .show a,.new a{margin-left:4px;text-transfor
 
   td a,#top-right a:hover {
     color:#FEC300;
+    text-decoration: none;
   }
   ul a:hover {
     color:#FEC300;
+    text-decoration: none;
   }
   .nav  a:hover {
     color:#FEC300;
+    text-decoration: none;
   }
   .show a:hover {
     color: #FEC300;
+    text-decoration: none;
   }
   .edit a:hover {
     color: #FEC300;
+    text-decoration: none;
+  }
+  .deleteAction{
+    color:#FEC300;
+    text-decoration: none;
   }
 
 .admin.link{
   position: fixed;
   bottom: 0;
-  font-size: 12px; color: #9C9C9C;
+  font-size: 12px; color: white;
   right: 5px;
   a {
   color: #9C9C9C;
@@ -63,7 +75,10 @@ a, ul a, #top-right a, .col-md-2 a, .show a,.new a{margin-left:4px;text-transfor
 }
 
 
-//ССЫЛКИ!!!!!!!!!!!!
+//КУРСОР ПРИ НАВЕДЕНИИ НА SHOW ДОМ
+.portfolioBox a img{
+  cursor: pointer;
+}
 
 
 div {
@@ -254,8 +269,6 @@ input, textarea, select, .uneditable-input {
 }
 
 
-
-
 //оформление index
 #wrapper {width:960px;margin:0 auto;padding:0 10px;text-align:left;background:url(../img/wrapper-bg.png) 0 195px no-repeat;}
 #contentArea {clear:both;float:left;padding:20px 30px 40px 20px;width:908px;border-left:1px solid #ddd;border-right:1px solid #ddd;background:#fff url(../img/contentArea-bg.png) 50% 1px no-repeat;}
@@ -272,15 +285,27 @@ input, textarea, select, .uneditable-input {
 #header ul {position:absolute;right:10px;bottom:0px;}
 #header ul li {float:left;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 2px 3px 4px;}
 #header ul li a {display:block;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;}
-#header ul li a:hover {color:#FEC300;}
+#header ul li a:hover {color:#FEC300;text-decoration: none;}
 
-#header ul li.current {background:#67920D;border-color:red;}
-#header ul li.current a {color:#fff;}
-#header ul li.current a:hover {cursor:default;background:red;}
+.line:hover:after {  
+  content: attr(data-title); /* Выводим текст */
+  z-index: 1; /* Отображаем подсказку поверх других элементов */
+  background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
+  font-family: Arial, sans-serif; /* Гарнитура шрифта */
+  font-size: 11px; /* Размер текста подсказки */
+  padding: 5px 10px; /* Поля */
+  border: 1px solid #333; /* Параметры рамки */
 
-.navi-description {font-size:.7em;color:#eee;display:block;text-transform:none;padding-top:1px;}
-#header ul li.current .navi-description {color:#fff;}
-#header ul li a:hover .navi-description {color:#fff;}
+}
 
 
-
+// .line {
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s, visibility 0s linear 0.3s;
+// }
+// #primaryContent:hover .line {
+//   // opacity: 1;
+//   visibility: visible;
+//   // transition-delay: 0s;
+// }

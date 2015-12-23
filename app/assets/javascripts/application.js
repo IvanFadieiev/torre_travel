@@ -29,3 +29,8 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('#notice').fadeOut(5000);
 });
+
+$(document).ready(function() {
+  $(".content").css("display", "none");
+  $(".content").fadeIn("slow");
+});

@@ -11,8 +11,10 @@
     <% if signed_in? %>
       <%=render "partials/panel"%>      
     <%end%>
-    <%=render "partials/header"%> 
+    <%=render "partials/header"%>
+    <div class="content">
       <%= yield %>
+    </div>
     <%=render "partials/footer"%>
     <div class="admin link">
       <% unless signed_in? %>
