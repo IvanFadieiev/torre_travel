@@ -7,14 +7,22 @@
     <%= f.label  "Тип жилья"%><br>
     <%= f.select(:housing, options_for_select([['Апартаменты', :house], ['Квартира', :flat],['Бунгало',:bungalo],['Челет',:chelet]])) %>
   </div>
+
+  <div class="field" id="line">
+    <%= f.label  "Расположение"%><br>
+    <%= f.select(:distance, options_for_select([['1ая линия', :first_line], ['2ая линия', :second_line]])) %>
+  </div>
+
+  <div class="field" id="distance">
+    <%= f.label "Расстояние" %><br>
+    <%= f.text_field :distance_m %>
+  </div>
+
   <div class="field">
     <%= f.label "Цена" %><br>
     <%= f.text_field :price %>
   </div>
-  <div class="field">
-    <%= f.label  "Расположение"%><br>
-    <%= f.select(:distance, options_for_select([['1ая линия', :first_line], ['2ая линия', :second_line]])) %>
-  </div>
+  
   <div class="field">
     <%= f.label "Описание на русском языке"%><br>
     <%= f.text_area :description, rows: 6  %>
@@ -22,6 +30,10 @@
   <div class="field">
     <%= f.label "Описание на испанском языке" %><br>
     <%= f.text_area :description_es, rows: 6  %>
+  </div>
+  <div class="field">
+    <%= f.label "Адресс" %><br>
+    <%= f.text_field :address %>
   </div>
   <div class="actions">
     <%= f.submit "Применить" %>

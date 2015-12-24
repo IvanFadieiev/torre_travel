@@ -25,7 +25,8 @@
         <%= @torre_travel.price %> €
       </p>
 
-      <p>
+      <%if @torre_travel.housing == "flat" %>
+        <p>
         <strong>Расстояние до моря: </strong>
         <%if @torre_travel.distance == "first_line" %>
           <%= "1ая линия" %>
@@ -33,6 +34,12 @@
           <%= " 2ая линия"%>
         <%end%>
       </p>
+      <%else%>
+        <p>
+        <strong>Расстояние до моря: </strong>
+        <%= @torre_travel.distance_m %> м
+      </p>
+      <%end%>
 
       <p>
         <strong>Описание на рус: </strong>
@@ -43,6 +50,12 @@
         <strong>Описание на исп: </strong>
         <%= @torre_travel.description_es %>
       </p>
+
+      <p>
+        <strong>Адресс: </strong>
+        <%= @torre_travel.address %>
+      </p>
+
       <%if signed_in?%>
         | <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
         <%= link_to 'Удалить', @torre_travel, method: :delete, data: { confirm: 'Уверен?' } %> |

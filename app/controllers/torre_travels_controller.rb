@@ -82,6 +82,6 @@ private
     end
 
     def torre_travel_params
-      params.require(:torre_travel).permit(:housing, :price, :distance, :description, :description_es)
+      params.require(:torre_travel).permit(:housing, :price, :distance, :description, :description_es, :distance_m, :address)
     end
 end

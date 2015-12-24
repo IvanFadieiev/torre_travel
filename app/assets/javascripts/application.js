@@ -16,10 +16,6 @@
 //= turbolinks
 //= require fotorama
 
-
-
-
-
 $(document).ready(function(){
   $('.message').click(function(){
     $(this).animate({top: -$(this).outerHeight()}, 500);
@@ -33,4 +29,18 @@ $(document).ready(function(){
 $(document).ready(function() {
   $(".content").css("display", "none");
   $(".content").fadeIn(800);
+});
+
+$(document).ready(function(){
+  $("select#torre_travel_housing ").click(function(){
+    var value = $(this).val();
+  if (value == "flat"){
+    $("div#distance").slideUp();
+    $("div#line").slideDown();
+  }
+  else{
+    $("div#distance").slideDown();
+    $("div#line").slideUp();;
+  }
+  });
 });

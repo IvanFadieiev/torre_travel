@@ -16,23 +16,24 @@
             <%= "Челет"%>
           <%end%>
         </h3>
-        <%= torre_travel.price %> €<br>
-        <%if torre_travel.distance == "first_line" %>
-        <div class="line" data-title="до 1000м до моря">
-          <%= "1ая линия" %>
-        </div>
+        <%= torre_travel.price %> €
+        <%if torre_travel.housing == "flat" %>
+          <p>
+            <%if torre_travel.distance == "first_line" %>
+              <div class="line" data-title="до 1000м до моря">
+                <%= "1ая линия" %>
+              </div>
+            <%else%>
+              <div class="line" data-title="более 1000м до моря">
+                <%= " 2ая линия"%>
+              </div>
+            <%end%>
+          </p>
         <%else%>
-        <div class="line" data-title="более 1000м до моря">
-          <%= " 2ая линия"%>
-        </div>
+          <p>До моря 
+            <%= torre_travel.distance_m %> м
+          </p>
         <%end%>
-        
-        <!-- <p>
-          <%= torre_travel.description %>
-        </p>
-        <p>
-          <%= torre_travel.description_es %>
-        </p> -->
       </div>     
       <%end%>
     </div>
