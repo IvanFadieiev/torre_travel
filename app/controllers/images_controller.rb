@@ -1,8 +1,8 @@
 class ImagesController < ActionController::Base
   before_action :find_image, only: [:update, :destroy]
   def new
-    @image = @torre_travel.imagess.build
-    @torre_travel = TorreTravel.find(params[:torre_travel_id])  
+      @image = @torre_travel.imagess.build
+      @torre_travel = TorreTravel.find(params[:torre_travel_id])  
   end
   
   def create

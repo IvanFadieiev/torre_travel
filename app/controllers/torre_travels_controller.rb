@@ -10,7 +10,11 @@ class TorreTravelsController < ApplicationController
   end
 
   def new
-    @torre_travel = TorreTravel.new
+    if signed_in?
+      @torre_travel = TorreTravel.new
+    else
+      redirect_to :root
+    end
   end
 
   def index
@@ -55,7 +59,8 @@ class TorreTravelsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to all_types_path, notice: 'Жилье успешно удалено!' }
         format.json { head :no_content }
-      end
+      end      
+        AdminMailer.torre_travel_destroyed(@torre_travel).deliver_now
     else
       redirect_to :root
     end
@@ -68,9 +73,9 @@ class TorreTravelsController < ApplicationController
   def service  
   end
 
-  def image(id)
-    Image.where(torre_travel_id = (:id)).first.image_of_housing.url(:small)
-  end
+  # def image(id)
+  #   Image.where(torre_travel_id = (:id)).first.image_of_housing.url(:small)
+  # end
 
 private
     def all_torre_travels

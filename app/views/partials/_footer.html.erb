@@ -1,8 +1,7 @@
-<% unless signed_in?%>
-    <div id="commercial">
-      <marquee direction="right" style="color: #D9470D; font-size: 25px; font-weight: bolder; line-height: 100%; text-shadow: #000000 0px 2px 2px;">
-        <%= render "commercials/index"%>
-        </font>
-      </marquee>
-    </div>
-<%end%>
+<div id="commercial">
+  <marquee direction="right" style="color: #D9470D; font-size: 25px; font-weight: bolder; line-height: 100%; text-shadow: #000000 0px 2px 2px;">
+    <% @commercials.each do |commercial|%>
+      <%= render partial:"commercials/index", locals:{commercial: commercial }%>
+    <%end%> <br> 
+  </marquee>
+</div>

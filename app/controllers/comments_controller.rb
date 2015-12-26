@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     if valid_captcha?(params[:captcha])
       if @comment.save
         redirect_to :back, notice: "Отзыв был успешно добавлен!"
+        AdminMailer.new_comment(@comment).deliver_now
       else
         render 'index'
       end

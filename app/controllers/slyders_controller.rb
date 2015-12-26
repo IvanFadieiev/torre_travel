@@ -1,8 +1,12 @@
 class SlydersController < ApplicationController
   before_action :find_slyder, only: [:edit, :update, :destroy]
   def new
-    @slyder = Slyder.new
-    @slyders = Slyder.all
+    if signed_in?
+      @slyder = Slyder.new
+      @slyders = Slyder.all
+    else
+      redirect_to :root
+    end
   end
   
   def create 

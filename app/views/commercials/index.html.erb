@@ -1,7 +1,14 @@
  <div class="index">
  <%if notice%>
-      <p id="notice"><%= notice %></p>
-    <% end %>
-    <%= render "index"%><br>
-    <%= button_to "Добавить рекламу",new_commercial_path, method: 'get' %>
+    <p id="notice"><%= notice %></p>
+  <% end %>
+  <% @commercials.each do |commercial|%>
+    <%= render partial:"index", locals:{commercial: commercial}%>
+    <%= link_to "Правка", edit_commercial_path(commercial)%>
+    <%= link_to "Удалить", commercial, method: :delete, data: { confirm: 'Уверены?' }%> <br> 
+  <%end%><br>
+  <%= button_to "Добавить рекламу",new_commercial_path, method: 'get' %>
 </div>
+
+
+

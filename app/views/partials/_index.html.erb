@@ -4,7 +4,11 @@
     <div id="primaryContent">
     <% @torre_travels.each do |torre_travel| %>
       <div class="portfolioBox">
+      <%if torre_travel.images.any?%>
         <%=link_to (image_tag torre_travel.images.first.image_of_housing.url(:small)), torre_travel%>
+      <%else%>
+      <%=link_to (image_tag("small/missing2.png")), torre_travel%>
+      <%end%>
         <h3>
           <%if torre_travel.housing == "house" %>
             <%= "Апартаменты" %>

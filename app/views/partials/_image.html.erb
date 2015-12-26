@@ -1,21 +1,25 @@
-<%if @torre_travel.images.any?%>
-  <%if signed_in?%>
+<%if signed_in?%>
+  <%if @torre_travel.images.any?%>
     <% @torre_travel.images.each do |image|%>
       <%= image_tag image.image_of_housing.url(:small)%>
       <%= link_to "Destroy", image, method: :delete, data: { confirm: "Вы уверенны?"}, :class => 'deleteAction' %>
     <%end%>
   <%else%>
-    
-      <div class="col-md-1">
-        <%= link_to 'Назад', all_types_path %>
-      </div>
-      <div class="col-md-8">
-        <div class="fotorama" data-width="768" data-height="576" data-loop="true" data-autoplay="3000">
-          <% @torre_travel.images.each do |image|%>
-          <%= image_tag image.image_of_housing.url(:large) %>
-          <%end%>
-         
-      </div>
-    </div>
+    <%=image_tag("small/missing2.png")%>
   <%end%>
+<%else%>
+  <div class="col-md-1">
+    <%= link_to 'Назад', all_types_path %>
+  </div>
+  <div class="col-md-8">
+    <%if @torre_travel.images.any?%>
+      <div class="fotorama" data-width="768" data-height="576" data-loop="true" data-autoplay="3000">
+        <% @torre_travel.images.each do |image|%>
+          <%= image_tag image.image_of_housing.url(:large) %>
+        <%end%>
+      </div>
+    <%else%>
+       <%=image_tag("large/missing2.png")%>
+    <%end%>  
+  </div> 
 <%end%>

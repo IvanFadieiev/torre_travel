@@ -36,7 +36,11 @@ class CommercialsController < ApplicationController
   end
 
   def index
-    @commercials = Commercial.all
+    if signed_in?
+      @commercials = Commercial.all
+    else
+      redirect_to :root
+    end
   end
 
   def destroy
