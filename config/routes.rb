@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # get 'users/sign_in'
   # get 'users/administration'
   root 'torre_travels#index'
+  resources :commercials
   resources :users
   resources :slyders
   resources :images, only: [:edit, :update, :destroy]

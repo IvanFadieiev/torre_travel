@@ -1,0 +1,7 @@
+ <div class="index">
+ <%if notice%>
+      <p id="notice"><%= notice %></p>
+    <% end %>
+    <%= render "index"%><br>
+    <%= button_to "Добавить рекламу",new_commercial_path, method: 'get' %>
+</div>

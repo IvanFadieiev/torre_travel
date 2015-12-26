@@ -1,16 +1,7 @@
 <% unless signed_in?%>
     <div id="commercial">
-      <marquee direction="right" style="color: #D9470D; font-size: 25px; font-weight: bolder; line-height: 200%; text-shadow: #000000 0px 2px 2px;">
-        Lorem ipsum dolor sit
-        реклама тел. 997-99-992 
-        реклама тел. 333-222-55
-        реклама тел. 111-111-111
-        реклама тел. 222-2222-22
-        реклама тел. 333-333-333
-        реклама тел. 444-444-444
-        реклама тел. 555-55-555
-        реклама тел. 666-666-666
-        реклама тел. 777-777-777
+      <marquee direction="right" style="color: #D9470D; font-size: 25px; font-weight: bolder; line-height: 100%; text-shadow: #000000 0px 2px 2px;">
+        <%= render "commercials/index"%>
         </font>
       </marquee>
     </div>

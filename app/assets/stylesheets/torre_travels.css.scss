@@ -2,17 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //фон для col
-.col-md-4, .col-md-3 {opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; height:204px; background:#eee 0 100%;border:1px solid white;}
-.top { opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; background:#eee 0 100%;border:1px solid white;}
-.edit .row{opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%;margin:0 0 20px 0;padding:10px 10px 10px 10px;background:#eee 0 100%;border:1px solid white;}
-.row1 .col-md-3{opacity: 0.8; height:100%;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin:0 0 20px 0;padding:10px 10px 10px 10px;background:#eee 0 100%;border:1px solid white;}
-.spain{position: relative;}
-.fotorama{position: absolute; z-index:100;height: 366px; width:100%;top:130px;}
-.frame{margin-top:-375px;position: absolute;height: 375px;opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; background:#eee 0 100%;border:1px solid white;}
-
+// .col-md-4, .col-md-3 {box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; height:100%; background:#eee 0 100%;border:1px solid white;}
+// .top {margin-top:-50px;margin: 0 10px 10px 10px;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:98%; background:#eee 0 100%;border:1px solid white;}
+// .row1 .col-md-3{opacity: 0.8; height:100%;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin:0 0 20px 0;padding:10px 10px 10px 10px;background:#eee 0 100%;border:1px solid white;}
+// .spain{position: relative;}
+// .fotorama{ z-index:100;height: 366px; width:100%;}
+// .frame{margin-top:-375px;position: absolute;height: 375px;opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; background:#eee 0 100%;border:1px solid white;}
+// body div.content div.fotorama{height:350px;}
 #top {
-	margin-top:375px;
+	// margin-top:375px;
   h1{
+    padding: 0;
     text-indent: 45px;
     text-shadow: 0 1px 0 #ccc,
                  0 2px 0 #c9c9c9,
@@ -38,3 +38,21 @@
     font-size: 19px;
   }
 }
+
+#commercial{
+  position: fixed; 
+  left: 0;
+  bottom: 0; 
+  padding: 0 20px 10px 20px; 
+  width: 100%; 
+}
+marquee {
+  direction: right;
+}
+
+// slyder поднять вверх
+.spain{
+    margin:-8px;
+    padding:0px;
+    display: block; /* Блочный элемент (для старых браузеров) */
+   }

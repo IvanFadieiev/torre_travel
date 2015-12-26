@@ -1,0 +1,11 @@
+<% @commercials.each do |commercial|%>
+    <%= commercial.body %>
+    <%= commercial.phone %>
+    <%= commercial.email %>
+    <%= commercial.address%>
+    <%if signed_in?%>
+      <%= link_to "Правка", edit_commercial_path(commercial)%>
+      <%= link_to "Удалить", commercial, method: :delete, data: { confirm: 'Уверены?' }%>
+    <%end%>
+    <br>
+  <%end%>

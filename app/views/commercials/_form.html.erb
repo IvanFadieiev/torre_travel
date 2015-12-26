@@ -1,0 +1,28 @@
+<%= form_for(@commercial) do |f| %>
+  <%= f.error_messages :header_message => "Ошибка заполнения формы",
+  :message => "Вы должны исправить эти ошибки:",
+  :header_tag => :h3%>
+
+  <div class="field">
+    <%= f.label  "Реклама"%><br>
+    <%= f.text_area :body, rows: 6, placeholder: "Введите содержание рекламы..." %>
+  </div>
+
+  <div class="field">
+    <%= f.label  "Телефон"%><br>
+    <%= f.telephone_field :phone, placeholder: "Введите номер телефона..." %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Email" %><br>
+    <%= f.email_field :email, placeholder: "Введите email..." %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Адресс" %><br>
+    <%= f.text_field :address, placeholder: "Введите адресс..." %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Применить" %>
+  </div>
+<% end %>

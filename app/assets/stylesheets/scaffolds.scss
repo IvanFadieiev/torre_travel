@@ -22,39 +22,35 @@ pre {
 
 // ССЫЛКИ!!!!!!!!!!!!! 
 a, ul a, #top-right a, .col-md-2 a, .show a,.new a{text-decoration: none;cursor:default;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
-// {
-//   color: #B22222;
-//   font-size: 20px;
-//   text-decoration: none;
-// }
-  a, #top-right a,ul a:visited {
-    color:#BD0A1C;
-  }
 
-  td a,#top-right a:hover {
-    color:#FEC300;
-    text-decoration: none;
-  }
-  ul a:hover {
-    color:#FEC300;
-    text-decoration: none;
-  }
-  .nav  a:hover {
-    color:#FEC300;
-    text-decoration: none;
-  }
-  .show a:hover {
-    color: #FEC300;
-    text-decoration: none;
-  }
-  .edit a:hover {
-    color: #FEC300;
-    text-decoration: none;
-  }
-  .deleteAction{
-    color:#FEC300;
-    text-decoration: none;
-  }
+a, #top-right a,ul a:visited {
+  color:#BD0A1C;
+}
+
+td a,#top-right a:hover {
+  color:#FEC300;
+  text-decoration: none;
+}
+ul a:hover {
+  color:#FEC300;
+  text-decoration: none;
+}
+.nav  a:hover {
+  color:#FEC300;
+  text-decoration: none;
+}
+.show a:hover {
+  color: #FEC300;
+  text-decoration: none;
+}
+.edit a:hover {
+  color: #FEC300;
+  text-decoration: none;
+}
+.deleteAction{
+  color:#FEC300;
+  text-decoration: none;
+}
 
 .admin.link{
   position: fixed;
@@ -118,45 +114,8 @@ div {
   }
 }
 
-// HEADER
-
-// .nav{
-//   text-align: center;
-//   background-color: #FFD700;
-//   padding: 10px;
-//   position: fixed; 
-//   left: 0;
-//   top: 0;  
-//   width: 100%;
-//   z-index:5;
-// }
-
-// .nav li {
-//     display: inline;
-//     padding-left: 20px;
-//    }
-
-//slyder
-.spain{
-    margin:0px;
-    padding:0px;
-    display: block; /* Блочный элемент (для старых браузеров) */
-    text-align: center; /* Выравнивание по центру */
-    font-style: italic; /* Курсивное начертание */
-   }
 
 
-
-#commercial{
-  position: fixed; 
-  left: 0;
-  bottom: 0; 
-  padding: 20px; 
-  width: 100%; 
-}
-marquee {
-  direction: right;
-}
 
 
 .new, .edit, .show{
@@ -245,7 +204,7 @@ input, textarea, select, .uneditable-input {
 
 
 //оформление index
-#wrapper {opacity: 0.9;width:960px;margin:0 auto;padding:0 10px;text-align:left;background:url(../img/wrapper-bg.png) 0 195px no-repeat;}
+#wrapper {width:960px;margin:0 auto;padding:0 10px;text-align:left;background:url(../img/wrapper-bg.png) 0 195px no-repeat;}
 #contentArea {clear:both;float:left;padding:20px 30px 40px 20px;width:908px;border-left:1px solid #ddd;border-right:1px solid #ddd;background:#fff url(../img/contentArea-bg.png) 50% 1px no-repeat;}
 #contentArea {width:920px;padding:19px;}
 #primaryContent {float:right;width:560px;}
@@ -256,7 +215,7 @@ input, textarea, select, .uneditable-input {
 #primaryContent .portfolioBox p {color:#444;}
 
 //header
-#header {height:130px;position:relative;padding-left:10px;background:#485558 url(../img/header-bg.png);border-bottom:3px solid #FEC300;}
+#header {margin-top:-10px;height:120px;position:relative;background:#485558 url(../img/header-bg.png);border-bottom:3px solid #FEC300;}
 #header ul {position:absolute;right:10px;bottom:0px;}
 #header ul li {float:left;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 2px 3px 4px;}
 #header ul li a {display:block;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;}
@@ -272,17 +231,3 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #333; /* Параметры рамки */
 
 }
-img{
-  opacity: 0.9;
-}
-
-// .line {
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.3s, visibility 0s linear 0.3s;
-// }
-// #primaryContent:hover .line {
-//   // opacity: 1;
-//   visibility: visible;
-//   // transition-delay: 0s;
-// }
