@@ -4,7 +4,7 @@
 <% end %>
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
-    <h3>Написать комментарий:</h3>
+    <h3>Написать отзыв:</h3>
     <%= form_for(@comment) do |f| %>
     <%= f.error_messages :header_message => "Ошибка заполнения формы",
   :message => "Вы должны исправить эти ошибки:",
@@ -27,8 +27,7 @@
   </div>   
 </div>
 <div class="new">
-<%= will_paginate %>
-  <h1>Комментарии</h1>
+  <h1>Отзывы</h1>
     <table>
       <thead>
         <tr>
@@ -54,7 +53,9 @@
           <%end%>
       </tbody>
     </table><br>
-    <%= will_paginate %>
+      <div class="apple_pagination">
+        <%= will_paginate %>
+      </div>
   </div> 
 </div>
 

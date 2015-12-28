@@ -29,11 +29,11 @@ $(document).ready(function(){
 $(document).ready(function() {
   $(".content").css("display", "none");
   $(".content").fadeIn(800);
-  $("#primaryContent div").css({ opacity: .9 });
-  $("#primaryContent div").mouseenter(function(){
+  $(".portfolioBox").css({ opacity: .9 });
+  $(".portfolioBox").mouseenter(function(){
     $(this).css({ opacity: 1 });
   });
-  $("#primaryContent div").mouseleave(function(){
+  $(".portfolioBox").mouseleave(function(){
     $(this).css({ opacity: 0.9 });
   });
 

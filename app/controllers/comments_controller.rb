@@ -30,7 +30,7 @@ class CommentsController < ApplicationController
 
   private
   def all_comments
-    @comments = Comment.paginate(page: params[:page], :per_page => 5)
+    @comments = Comment.paginate(page: params[:page], :per_page => 6)
   end
 
   def comments_params

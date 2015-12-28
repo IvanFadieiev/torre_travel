@@ -7,13 +7,14 @@ class TorreTravelsController < ApplicationController
   end
 
   def show
+    
   end
 
   def new
     if signed_in?
       @torre_travel = TorreTravel.new
     else
-      redirect_to :root
+      render file: 'public/404.html', status: :not_found, layout: false
     end
   end
 
@@ -67,7 +68,7 @@ class TorreTravelsController < ApplicationController
   end
 
   def housing
-    @torre_travels = TorreTravel.where(housing: params[:housing])
+    @torre_travels = TorreTravel.paginate(page: params[:page], :per_page => 4).where(housing: params[:housing])
   end
 
   def service  
@@ -83,7 +84,12 @@ private
     end
 
     def set_torre_travel
-      @torre_travel = TorreTravel.find(params[:id])
+     begin
+        @torre_travel = TorreTravel.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        logger.error "#{params[:id]} не найдено"
+        redirect_to torre_travels_path, notice: 'Жилье не найдено'
+      end
     end
 
     def torre_travel_params
