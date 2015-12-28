@@ -79,7 +79,7 @@ class TorreTravelsController < ApplicationController
 
 private
     def all_torre_travels
-      @torre_travels = TorreTravel.all
+      @torre_travels = TorreTravel.paginate(page: params[:page], :per_page => 4)
     end
 
     def set_torre_travel

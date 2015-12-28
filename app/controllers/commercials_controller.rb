@@ -1,7 +1,11 @@
 class CommercialsController < ApplicationController
   before_action :find_commercial, only: [:edit, :update, :destroy, :show]
   def new
-    @commercial = Commercial.new
+    if signed_in?
+      @commercial = Commercial.new
+    else
+      redirect_to :root
+    end
   end
 
   def create

@@ -29,12 +29,12 @@ $(document).ready(function(){
 $(document).ready(function() {
   $(".content").css("display", "none");
   $(".content").fadeIn(800);
-  $("#primaryContent div").css({ opacity: .4 });
+  $("#primaryContent div").css({ opacity: .9 });
   $("#primaryContent div").mouseenter(function(){
     $(this).css({ opacity: 1 });
   });
   $("#primaryContent div").mouseleave(function(){
-    $(this).css({ opacity: 0.4 });
+    $(this).css({ opacity: 0.9 });
   });
 
 });
