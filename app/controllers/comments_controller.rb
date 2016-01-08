@@ -8,7 +8,8 @@ class CommentsController < ApplicationController
         redirect_to :back, notice: "Отзыв был успешно добавлен!"
         AdminMailer.new_comment(@comment).deliver_now
       else
-        render 'index'
+        flash.now[:notice]="Возникли ошибки, попробуйте еще раз!"
+        render 'index'   
       end
     else
       flash[:notice]="Не правильно введен код с картинки!"

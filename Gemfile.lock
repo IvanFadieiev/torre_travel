@@ -72,6 +72,7 @@ GEM
       rspec-rails (>= 2.8.1)
       simplecov (>= 0.3.8)
       yard (>= 0.7.0)
+    emoji4rails (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
     fotorama-rails (0.1.0)
@@ -135,6 +136,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_emoji (1.7.1)
+      rails (>= 3.1.0)
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
@@ -216,6 +219,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dynamic_form
   easy_captcha
+  emoji4rails
   fotorama-rails
   fotoramajs
   jbuilder (~> 2.0)
@@ -223,6 +227,7 @@ DEPENDENCIES
   paperclip (~> 4.3)
   pry-byebug
   rails (= 4.2.5)
+  rails_emoji
   rmagick (~> 2.15, >= 2.15.4)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

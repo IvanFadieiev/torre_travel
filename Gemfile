@@ -55,3 +55,5 @@ gem "fotoramajs"
 gem 'easy_captcha'
 gem 'pry-byebug'
 gem 'will_paginate-bootstrap'
+gem 'emoji4rails'
+gem 'rails_emoji'
