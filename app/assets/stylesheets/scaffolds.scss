@@ -21,19 +21,9 @@ pre {
 
 
 // ССЫЛКИ!!!!!!!!!!!!! 
-#primaryContent div.apple_pagination div a,#primaryContent div.apple_pagination div a.next_page ,#primaryContent div.apple_pagination div a.previous_page,#index div:nth-child(1) div center div a, a, ul a, #top-right a, .col-md-2 a, .show a,.new a{text-decoration: none;cursor:default;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
+div.apple_pagination div a,#index div:nth-child(1) div center div a, a, ul a, #top-right a, .col-md-2 a, .show a,.new a{text-decoration: none;cursor:default;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
 
-#primaryContent div.apple_pagination div a.next_page:hover{
-  color:#FEC300;
-  text-decoration: none;
-}
-
-#primaryContent div.apple_pagination div a.previous_page:hover{
-  color:#FEC300;
-  text-decoration: none;
-}
-
-#primaryContent div.apple_pagination div a:hover{
+div.apple_pagination div a:hover{
   color:#FEC300;
   text-decoration: none;
 }
