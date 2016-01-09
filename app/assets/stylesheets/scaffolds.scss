@@ -22,20 +22,20 @@ pre {
 
 
 // ССЫЛКИ!!!!!!!!!!!!! 
-div.apple_pagination div a,#index div:nth-child(1) div center div a, a, ul a, #top-right a, .col-md-2 a, .show a,.new a{text-decoration: none;cursor:default;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
-
+div.apple_pagination div a, a, ul a, #top-right a, .col-md-2 a, .show a,.new a{text-decoration: none;cursor:default;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
+#index div div center div a{text-decoration: none;cursor:default;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.3em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
+#index div:nth-child(2) ul center a:visited{text-decoration: none;cursor:default;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
 div.apple_pagination div a:hover{
   color:#FEC300;
   text-decoration: none;
 }
-
-#index div:nth-child(1) div center div a:hover{
+#index div:nth-child(2) ul center a:hover{
   color:#FEC300;
   text-decoration: none;
 }
-
-a, #top-right a,ul a:visited {
-  color:#BD0A1C;
+#index div:nth-child(1) div center div a:hover{
+  color:#FEC300;
+  text-decoration: none;
 }
 
 td a,#top-right a:hover {
@@ -72,9 +72,6 @@ ul a:hover {
   color: #9C9C9C;
   font-size: 12px;
   text-decoration: none;
-  }
-  a:visited {
-    color: #9C9C9C;
   }
   a:hover {
     color: #9C9C9C;
@@ -146,11 +143,8 @@ div {
   font-size: 15px;
   text-decoration: none;
   }
-  a:visited {
-    color: #9C9C9C;
-  }
   a:hover {
-    color: #9C9C9C;
+    color: #FEC300;
   }
 }
 

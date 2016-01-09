@@ -20,6 +20,10 @@
       </div>
     <%else%>
        <%=image_tag("large/missing2.png")%>
-    <%end%>  
+    <%end%> 
+    <a href="#?w=500" rel="popup_name" class="poplight">Зарезервировать</a>
+    <div id="popup_name" class="popup_block">
+      <%=render partial:"partials/left"%>
+    </div> 
   </div> 
 <%end%>
