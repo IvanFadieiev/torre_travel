@@ -16,7 +16,7 @@ a.deleteAction:hover{
 
 
   .col-md-4.col-md-offset-4 {margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
-  .new{box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
+  .new{opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
 
   #fade { 
     display: none;/*--по умолчанию скрыто--*/ 
@@ -110,4 +110,33 @@ body div.content div.new_comment a{
 body div.content div.new_comment a:hover{
   color:#FEC300;
   text-decoration: none;
+}
+
+body div.content div.new {
+  h2{
+    margin-left: 15px;
+  }
+  span.timestamp {
+    color: #808080;
+    font-size: 10px;
+    top:-15px;
+    margin-left: 10px;
+    position: relative;
+  }
+  li {
+    list-style: none;
+    margin: 10px 0 0 0;
+    border-top: 1px solid #C8C8C8;
+    .title_com{
+      font-size: 24px;
+    }
+  }
+  div{
+    margin-left: 40px;
+  }
+  div.body_com{
+    top: -10px;
+    position: relative;
+    margin-left: 60px;
+  }
 }

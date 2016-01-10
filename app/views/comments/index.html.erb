@@ -44,31 +44,24 @@
   </div>   
 </div>
 <div class="new">
-  <h1>Отзывы</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Имя</th>
-          <th>Email</th>
-          <th>Отзыв</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @comments.each do |comment| %>
-          <tr>
-            <td><%= comment.name%></td>
-            <td><%= comment.email%></td>
-            <td><%= raw render_emoji(comment.body, { :style => 'width:20px;' }) %></td>
-            <%if signed_in?%>
-              <td>
-                <%=link_to 'Удалить',comment, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %>
-              </td>
-            <%end%>
-          </tr>
-          <%end%>
-      </tbody>
-    </table><br>
+  <h2>Отзывы</h2>
+    <% @comments.each do |comment| %>
+      <li>
+        <div class="title_com">
+          <%= comment.name%><br>
+          <span class="timestamp">
+            <%= (comment.created_at) %>
+          </span>
+        </div>
+      </li>
+      <%#= comment.email%>
+      <div class="body_com">
+        <%= raw render_emoji(comment.body, { :style => 'width:20px;' }) %>
+      </div>
+        <%if signed_in?%>
+          <%=link_to 'Удалить',comment, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %>
+        <%end%>
+      <%end%>
       <div class="apple_pagination">
         <%= will_paginate %>
       </div>

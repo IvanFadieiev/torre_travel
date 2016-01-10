@@ -10,7 +10,6 @@
 // .frame{margin-top:-375px;position: absolute;height: 375px;opacity: 0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);width:100%; background:#eee 0 100%;border:1px solid white;}
 // body div.content div.fotorama{height:350px;}
 #top {
-	// margin-top:375px;
   h1{
     padding: 0;
     text-indent: 45px;
@@ -61,3 +60,6 @@ marquee {
   color:#FEC300;
   text-decoration: none;
 }
+body div.content div div:nth-child(2) div center div div ul{opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
+body div.content div div:nth-child(1) div.col-md-3 {opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
+body > div.content > div > div:nth-child(1) > div.col-md-1 > a{opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
