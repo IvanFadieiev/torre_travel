@@ -22,17 +22,15 @@
         </h3>
         <%= torre_travel.price %> €
         <%if torre_travel.housing == "flat" %>
-          <p>
-            <%if torre_travel.distance == "first_line" %>
-              <div class="line" data-title="до 1000м до моря">
-                <%= "1ая линия" %>
-              </div>
-            <%else%>
-              <div class="line" data-title="более 1000м до моря">
-                <%= " 2ая линия"%>
-              </div>
-            <%end%>
-          </p>
+          <%if torre_travel.distance == "first_line" %>
+            <div class="line" data-title="до 1000м до моря">
+              <p><%= "1ая линия" %></p> 
+            </div>
+          <%else%>
+            <div class="line" data-title="более 1000м до моря">
+              <p><%= " 2ая линия"%></p>
+            </div>
+          <%end%>
         <%else%>
           <p>До моря 
             <%= torre_travel.distance_m %> м
@@ -40,11 +38,9 @@
         <%end%>
       </div>     
       <%end%>
-
         <div class="apple_pagination">
            <%= will_paginate %>
-        </div>
-           
+        </div>          
     </div>
     <div id="secondaryContent">
     <%= render partial: "partials/service" %>

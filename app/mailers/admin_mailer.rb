@@ -4,12 +4,8 @@ class AdminMailer < ApplicationMailer
 
   def torre_travel_destroyed(house)
     @torre_travel = house
-    attachments.inline['filename.jpg'] = {mime_type: 'application/x-gzip',
-                                    content: @torre_travel.images.image_of_housing.url(:small)}
     mail to: 'torretravel2015@gmail.com',
          subject: "Жилье удалено"
-    
-
   end
 
   def new_comment(comm)
@@ -18,4 +14,15 @@ class AdminMailer < ApplicationMailer
          subject: "Новый комментарий"
   end
 
+  def new_housing(torre_travel)
+    @torre_travel = torre_travel
+    mail to: Comment.pluck(:email),
+         subject: "Новое жилье"
+  end
+
+  def edit_housing(torre_travel)
+    @torre_travel = torre_travel
+    mail to: Comment.pluck(:email),
+         subject: "Жилье обновлено"
+  end
 end

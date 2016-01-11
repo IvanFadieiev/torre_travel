@@ -30,6 +30,7 @@ class TorreTravelsController < ApplicationController
      if signed_in?
       if @torre_travel.save
         redirect_to @torre_travel, notice: 'Жилье успешно создано!'
+        AdminMailer.new_housing(@torre_travel).deliver_now
       else
         render 'new'
       end
@@ -42,6 +43,7 @@ class TorreTravelsController < ApplicationController
     if signed_in?
       respond_to do |format|
         if @torre_travel.update(torre_travel_params)
+          AdminMailer.edit_housing(@torre_travel).deliver_now
           format.html { redirect_to @torre_travel, notice: 'Жилье успешно обновлено!' }
           format.json { render :show, status: :ok, location: @torre_travel }
         else
@@ -73,10 +75,6 @@ class TorreTravelsController < ApplicationController
 
   def service  
   end
-
-  # def image(id)
-  #   Image.where(torre_travel_id = (:id)).first.image_of_housing.url(:small)
-  # end
 
 private
     def all_torre_travels
