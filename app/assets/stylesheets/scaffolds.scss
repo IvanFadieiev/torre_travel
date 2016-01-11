@@ -227,18 +227,6 @@ input, textarea, select, .uneditable-input {
 #header ul li a {display:block;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;}
 #header ul li a:hover {color:#FEC300;text-decoration: none;}
 
-.line:hover:after {  
-  content: attr(data-title); /* Выводим текст */
-  z-index: 1; /* Отображаем подсказку поверх других элементов */
-  background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
-  font-family: Arial, sans-serif; /* Гарнитура шрифта */
-  font-size: 11px; /* Размер текста подсказки */
-  padding: 5px 10px; /* Поля */
-  border: 1px solid #333; /* Параметры рамки */
-
-}
-
-
 //pagination
 .apple_pagination {
 // background: #f1f1f1;

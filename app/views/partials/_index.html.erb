@@ -11,24 +11,25 @@
       <%end%>
         <h3>
           <%if torre_travel.housing == "house" %>
-            <%= "Апартаменты" %>
+            <%= "Апартаменты" %> ID<%=torre_travel.id%>
           <%elsif torre_travel.housing == "flat"%>
-            <%= "Квартира"%>
+            <%= "Квартира"%> ID<%=torre_travel.id%>
           <%elsif torre_travel.housing == "bungalo"%>
-            <%= "Бунгало"%>
+            <%= "Бунгало"%> ID<%=torre_travel.id%>
           <%else%>
-            <%= "Челет"%>
+            <%= "Челет"%> ID<%=torre_travel.id%>
           <%end%>
         </h3>
         <%= torre_travel.price %> €
         <%if torre_travel.housing == "flat" %>
           <%if torre_travel.distance == "first_line" %>
-            <div class="line" data-title="до 1000м до моря">
-              <p><%= "1ая линия" %></p> 
+            <div class="line">
+              <p title="до 1000м до моря" style="cursor:help;"><%= "1ая линия" %></p> 
+              <!-- <div class="line1" >до 1000м до моря</div> -->
             </div>
           <%else%>
-            <div class="line" data-title="более 1000м до моря">
-              <p><%= " 2ая линия"%></p>
+            <div class="line">
+              <p title="более 1000м до моря" style="cursor:help;"><%= " 2ая линия"%></p>
             </div>
           <%end%>
         <%else%>

@@ -100,3 +100,18 @@ $(document).ready(function(){
     return false;
    });
 });
+
+// $(document).ready(function(){
+//   $('#primaryContent div div p').mouseenter(function(){
+//     console.log('rabotaet');
+//   });
+//   $('#primaryContent div div p').mouseleave(function(){
+//     console.log('ne rabotaet');
+//   });
+// });
+
+$(document).ready(function(){
+  $('body > div.panel > ul > li:nth-child(1)').click(function(){
+    $('body > div.panel > ul > div').toggle('slow');
+  });
+});

@@ -6,6 +6,9 @@
 <div class="row1">
   <%= render partial: "partials/image" %>
     <div class="col-md-3">
+      <p style='font-style:italic;font-size: 27px;margin-top:10px;'>
+        <strong> ID<%=@torre_travel.id%></strong>
+      </p>
       <p>
         <strong>Тип жилья: </strong>
         <%if @torre_travel.housing == "house" %>

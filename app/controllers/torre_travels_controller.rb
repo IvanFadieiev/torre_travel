@@ -83,7 +83,16 @@ private
 
     def set_torre_travel
      begin
+      if params[:q]
+        tt = TorreTravel.find_by_id(params[:q])
+        if tt.nil?
+          redirect_to :back, notice: "Вы допустили ошибку! Введите ID еще раз"
+        else
+          @torre_travel = tt
+        end
+      else
         @torre_travel = TorreTravel.find(params[:id])
+      end
       rescue ActiveRecord::RecordNotFound
         logger.error "#{params[:id]} не найдено"
         redirect_to torre_travels_path, notice: 'Жилье не найдено'

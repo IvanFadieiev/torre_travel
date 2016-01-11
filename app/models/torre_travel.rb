@@ -1,4 +1,5 @@
 class TorreTravel < ActiveRecord::Base
+  default_scope -> { order('created_at DESC') }
   has_many :images, dependent: :destroy
   enum housing: [:house, :flat, :bungalo, :chelet]
   enum distance: [:first_line, :second_line]
