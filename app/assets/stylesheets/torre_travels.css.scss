@@ -38,17 +38,6 @@
   }
 }
 
-#commercial{
-  position: fixed; 
-  left: 0;
-  bottom: 0; 
-  padding: 0 20px 10px 20px; 
-  width: 100%; 
-}
-marquee {
-  direction: right;
-}
-
 // slyder поднять вверх
 .spain{
     margin:-8px;
@@ -62,4 +51,5 @@ marquee {
 }
 body div.content div div:nth-child(2) div center div div ul{opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
 body div.content div div:nth-child(1) div.col-md-3 {opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
-body > div.content > div > div:nth-child(1) > div.col-md-1 > a{opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
+// body div.content div div:nth-child(1) div.col-md-1 a{opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}
+.poplight{opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin-top:10px; height:100%; background:#eee 0 100%;border:1px solid white;}

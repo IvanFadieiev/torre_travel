@@ -115,3 +115,30 @@ $(document).ready(function(){
     $('body > div.panel > ul > div').toggle('slow');
   });
 });
+
+
+$(document).ready(function(){
+  $('.scrollingtext').bind('marquee', function () {
+    var ob = $(this);
+    var tw = ob.width();
+    var ww = ob.parent().width();
+    ob.css({
+        right: -tw
+    });
+    ob.animate({
+        right: ww
+    }, 30000, 'linear', function () {
+        ob.trigger('marquee');
+    });
+    ob.mouseover(function() {
+    $(this).stop();
+    });
+    ob.mouseleave(function() {
+    ob.animate({
+        right: ww
+    }, 30000, 'linear', function () {
+        ob.trigger('marquee');
+    });
+    });
+  }).trigger('marquee');
+});

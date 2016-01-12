@@ -1,7 +1,11 @@
-<div id="commercial">
-  <marquee direction="right" style="color: #D9470D; font-size: 25px; font-weight: bolder; line-height: 100%; text-shadow: #000000 0px 2px 2px;">
-    <% @commercials.each do |commercial|%>
-      <%= render partial:"commercials/index", locals:{commercial: commercial }%>
-    <%end%> <br> 
-  </marquee>
-</div>
+<!-- <div id="commercial"> -->
+  <div class="jp-title">
+    <ul>
+      <li class="scrollingtext">
+        <% @commercials.each do |commercial|%>
+          <%= render partial:"commercials/index", locals:{commercial: commercial }%>
+        <%end%> 
+      </li>
+    </ul>
+  </div>
+<!-- </div> -->

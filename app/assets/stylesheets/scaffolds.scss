@@ -254,4 +254,24 @@ cursor: default; }
   text-decoration: none;
   color: black; }
   .apple_pagination a:hover, .apple_pagination a:focus {
-    text-decoration: underline; }
+    text-decoration: underline; 
+  }
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!кроссбраузерность(Chrome, Firefox)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+@-moz-document url-prefix(){
+  .new{
+    margin-top:40px;
+  }
+  .poplight{
+    position: relative;
+    top: 20px;
+  }
+  .ya-share2__list{
+    position: relative;
+    top: 20px;
+  }
+}
