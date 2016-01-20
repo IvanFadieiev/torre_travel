@@ -25,15 +25,19 @@
   
   <div class="field">
     <%= f.label "Описание на русском языке"%><br>
-    <%= f.text_area :description, rows: 6  %>
+    <%= f.text_area :description, rows: 5  %>
   </div>
   <div class="field">
     <%= f.label "Описание на испанском языке" %><br>
-    <%= f.text_area :description_es, rows: 6  %>
+    <%= f.text_area :description_es, rows: 5  %>
   </div>
   <div class="field">
     <%= f.label "Адресс" %><br>
     <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label  "Резервирование"%><br>
+    <%= f.select(:reserved, options_for_select([['Не заразервировано',:unreserv], ['Зарезервировано', :reserv]])) %>
   </div>
   <div class="actions">
     <%= f.submit "Применить" %>

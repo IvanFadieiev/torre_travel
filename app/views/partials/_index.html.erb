@@ -4,8 +4,11 @@
     <div id="primaryContent">
     <% @torre_travels.each do |torre_travel| %>
       <div class="portfolioBox">
+        <%if torre_travel.reserved == "reserv"%>
+          <div class="reserved" VALUE="<%=torre_travel.id%>"></div>
+        <%end%>
       <%if torre_travel.images.any?%>
-        <%=link_to (image_tag torre_travel.images.first.image_of_housing.url(:small)), torre_travel%>
+        <%=link_to (image_tag torre_travel.images.first.image_of_housing.url(:small)), torre_travel%>  
       <%else%>
       <%=link_to (image_tag("small/missing2.png")), torre_travel%>
       <%end%>
@@ -24,8 +27,7 @@
         <%if torre_travel.housing == "flat" %>
           <%if torre_travel.distance == "first_line" %>
             <div class="line">
-              <p title="до 1000м до моря" style="cursor:help;"><%= "1ая линия" %></p> 
-              <!-- <div class="line1" >до 1000м до моря</div> -->
+              <p title="менее 1000м до моря" style="cursor:help;"><%= "1ая линия" %></p> 
             </div>
           <%else%>
             <div class="line">

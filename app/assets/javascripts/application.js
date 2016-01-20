@@ -20,13 +20,9 @@ $(document).ready(function(){
   $('.message').click(function(){
     $(this).animate({top: -$(this).outerHeight()}, 500);
   });
-});
 
-$(document).ready(function(){
   $('#notice').fadeOut(5000);
-});
 
-$(document).ready(function() {
   $(".content").css("display", "none");
   $(".content").fadeIn(800);
   $(".portfolioBox").css({ opacity: .9 });
@@ -37,10 +33,7 @@ $(document).ready(function() {
     $(this).css({ opacity: 0.9 });
   });
 
-});
-
-$(document).ready(function(){
-  $("select#torre_travel_housing ").click(function(){
+   $("select#torre_travel_housing ").click(function(){
     var value = $(this).val();
   if (value == "flat"){
     $("div#distance").slideUp();
@@ -51,19 +44,13 @@ $(document).ready(function(){
     $("div#line").slideUp();;
   }
   });
-});
 
-//emojis
-$(document).ready(function(){
-  $("#new_comment div.emojis img").click(function(){
+   $("#new_comment div.emojis img").click(function(){
     var text = $(this).attr('alt');
      $('#comment_body').val($('#comment_body').val()+text);
   });
-});
 
-$(document).ready(function(){
-//При нажатии на ссылку с классом poplight и href атрибутом тега <a> с #
-  $('a.poplight[href^=#]').click(function() {
+    $('a.poplight[href^=#]').click(function() {
     var popID = $(this).attr('rel'); //получаем имя окна, важно не забывать, при добавлении новых, менять имя в атрибуте rel ссылки
     var popURL = $(this).attr('href'); //получаем размер из href атрибута ссылки
  
@@ -99,46 +86,39 @@ $(document).ready(function(){
     });
     return false;
    });
-});
 
-// $(document).ready(function(){
-//   $('#primaryContent div div p').mouseenter(function(){
-//     console.log('rabotaet');
-//   });
-//   $('#primaryContent div div p').mouseleave(function(){
-//     console.log('ne rabotaet');
-//   });
-// });
-
-$(document).ready(function(){
-  $('body > div.panel > ul > li:nth-child(1)').click(function(){
+   $('body > div.panel > ul > li:nth-child(1)').click(function(){
     $('body > div.panel > ul > div').toggle('slow');
   });
-});
 
 
-$(document).ready(function(){
   $('.scrollingtext').bind('marquee', function () {
     var ob = $(this);
     var tw = ob.width();
     var ww = ob.parent().width();
     ob.css({
         right: -tw
-    });
+      });
     ob.animate({
         right: ww
-    }, 30000, 'linear', function () {
+      }, 30000, 'linear', function () {
         ob.trigger('marquee');
     });
     ob.mouseover(function() {
-    $(this).stop();
-    });
+      $(this).stop();
+      });
     ob.mouseleave(function() {
     ob.animate({
         right: ww
-    }, 30000, 'linear', function () {
+      }, 30000, 'linear', function () {
         ob.trigger('marquee');
-    });
+      });
     });
   }).trigger('marquee');
+
+  $('#primaryContent div div.reserved').click(function(data){
+    location = '/torre_travels/'+ $(this).attr("value");
+  });
+
+  $('.fotorama__nav.fotorama__nav--dots').remove();
 });

@@ -8,11 +8,11 @@ class CommentsController < ApplicationController
         redirect_to :back, notice: "Отзыв был успешно добавлен!"
         AdminMailer.new_comment(@comment).deliver_now
       else
-        flash.now[:notice]="Возникли ошибки, попробуйте еще раз!"
-        render 'index'   
+        flash.now[:notice] = "Возникли ошибки, попробуйте еще раз!"
+        render 'index'
       end
     else
-      flash[:notice]="Не правильно введен код с картинки!"
+      flash[:notice] = "Не правильно введен код с картинки!"
       render 'index'
     end
   end
@@ -28,13 +28,13 @@ class CommentsController < ApplicationController
     end
   end
 
-
   private
+
   def all_comments
-    @comments = Comment.paginate(page: params[:page], :per_page => 6)
+    @comments = Comment.paginate(page: params[:page], per_page: 6)
   end
 
   def comments_params
-    params.require(:comment).permit(:name,:body,:email)
+    params.require(:comment).permit(:name, :body, :email)
   end
 end

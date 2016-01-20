@@ -9,7 +9,7 @@ class SlydersController < ApplicationController
     end
   end
   
-  def create 
+  def create
     @slyder = Slyder.create(slyder_params)
     if signed_in?
       if @slyder.save
@@ -52,6 +52,7 @@ class SlydersController < ApplicationController
   end
   
   private
+  
   def find_slyder
     @slyder = Slyder.find(params[:id])
   end

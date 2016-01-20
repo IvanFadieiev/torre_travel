@@ -1,11 +1,9 @@
-<!-- <div id="commercial"> -->
-  <div class="jp-title">
-    <ul>
-      <li class="scrollingtext">
-        <% @commercials.each do |commercial|%>
-          <%= render partial:"commercials/index", locals:{commercial: commercial }%>
-        <%end%> 
-      </li>
-    </ul>
-  </div>
-<!-- </div> -->
+<div class="jp-title">
+  <ul>
+    <li class="scrollingtext">
+      <% @commercials.each do |commercial|%>
+        <%= render partial:"commercials/index", locals:{commercial: commercial }%>
+      <%end%> 
+    </li>
+  </ul>
+</div>

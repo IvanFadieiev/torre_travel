@@ -6,6 +6,15 @@
 <div class="row1">
   <%= render partial: "partials/image" %>
     <div class="col-md-3">
+
+
+
+        <%if @torre_travel.reserved == "reserv"%>
+          <div class="reserved"></div>
+        <%end%>
+
+
+        
       <p style='font-style:italic;font-size: 27px;margin-top:10px;'>
         <strong> ID<%=@torre_travel.id%></strong>
       </p>
@@ -77,8 +86,5 @@
       <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,viber" data-counter="" data-copy="first" data-description="Лучший сайт для поиска жилья в Испании"></div>
       </center>
     </div>
-
-
-
   </div>
 </div>

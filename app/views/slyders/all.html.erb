@@ -4,12 +4,12 @@
     <% end %>
   <% @slyders.each do |slyder|%>
     <div class="row">
-      <div class="col-md-5">
-        <%= image_tag slyder.poster.url(:small) %><br><br>
-        </div>
-      <div class="col-md-6 col-md-offset-1">
+      <div class="col-md-6">
+        <%= image_tag slyder.poster.url(:small) %><br><br><br><br>
+      </div>
+      <div class="col-md-6 ">
         <p>
-          <%= slyder.description%><br><br>
+          <%= slyder.description%><br><br><br>
         </p>
       </div>
     </div>

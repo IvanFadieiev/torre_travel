@@ -62,7 +62,7 @@ class CommercialsController < ApplicationController
   private
 
   def commercial_params
-    params.require(:commercial).permit(:body, :phone, :email, :address)  
+    params.require(:commercial).permit(:body, :phone, :email, :address)
   end
 
   def find_commercial
