@@ -25,6 +25,7 @@ pre {
 div.apple_pagination div a, a, ul a, #top-right a, .col-md-2 a, .show a,.new a{text-decoration: none;cursor:default;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
 #index div div center div a{text-decoration: none;cursor:default;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.3em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
 #index div:nth-child(2) ul center a:visited{text-decoration: none;cursor:default;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
+a:visited{text-decoration: none;cursor:default;text-transform:uppercase;display: inline;text-shadow: black 1px 1px 1px;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;} 
 div.apple_pagination div a:hover{
   color:#FEC300;
   text-decoration: none;
@@ -135,7 +136,7 @@ div {
 .panel{
   margin-top: 130px;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000000;
   right: 0;
   width: 22%;
   background-color: #FFE173;
@@ -221,7 +222,7 @@ input, textarea, select, .uneditable-input {
 #primaryContent .portfolioBox p {color:#444;}
 
 //header
-#header {margin-top:-10px;height:120px;position:relative;background:#485558 url(../img/header-bg.png);border-bottom:3px solid #FEC300;}
+#header {z-index:100000; margin-top:-10px;height:120px;position:relative;background:#485558 url(../img/header-bg.png);border-bottom:3px solid #FEC300;}
 #header ul {position:absolute;right:10px;bottom:0px;}
 #header ul li {float:left;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 2px 3px 4px;}
 #header ul li a {display:block;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;}
@@ -229,8 +230,6 @@ input, textarea, select, .uneditable-input {
 
 //pagination
 .apple_pagination {
-// background: #f1f1f1;
-// border: 1px solid #e5e5e5;
 text-align: center;
 padding: 1em;
 cursor: default; }
@@ -256,7 +255,7 @@ cursor: default; }
   .apple_pagination a:hover, .apple_pagination a:focus {
     text-decoration: underline; 
   }
-
+body > div.content > div.service_page{padding: 20px;opacity:0.9;box-shadow: 0 0 10px rgba(0,0,0,0.5);margin:20px; height:100%; background:#eee 0 100%;border:1px solid white;}
 
 
 

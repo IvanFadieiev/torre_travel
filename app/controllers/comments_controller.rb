@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comments_params)
     if valid_captcha?(params[:captcha])
       if @comment.save
-        redirect_to :back, notice: "Отзыв был успешно добавлен!"
+        redirect_to comments_path, notice: "Отзыв был успешно добавлен!"
         AdminMailer.new_comment(@comment).deliver_now
       else
         flash.now[:notice] = "Возникли ошибки, попробуйте еще раз!"
