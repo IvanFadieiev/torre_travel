@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160112142528) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.string   "name"
     t.string   "body"
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160112142528) do
     t.datetime "image_of_housing_updated_at"
   end
 
-  add_index "images", ["torre_travel_id"], name: "index_images_on_torre_travel_id"
+  add_index "images", ["torre_travel_id"], name: "index_images_on_torre_travel_id", using: :btree
 
   create_table "slyders", force: :cascade do |t|
     t.text     "description"
@@ -75,6 +78,7 @@ ActiveRecord::Schema.define(version: 20160112142528) do
     t.string   "remember_token"
   end
 
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
+  add_foreign_key "images", "torre_travels"
 end

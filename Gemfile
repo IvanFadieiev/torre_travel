@@ -45,10 +45,9 @@ group :development do
   gem 'spring'
 end
 
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
+gem 'pg', '0.15.1'
+gem 'rails_12factor', '0.0.2'
+
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bcrypt-ruby', '3.1.2'
