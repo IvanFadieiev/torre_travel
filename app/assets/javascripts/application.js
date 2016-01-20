@@ -50,7 +50,9 @@ $(document).ready(function(){
      $('#comment_body').val($('#comment_body').val()+text);
   });
 
-    $('a.poplight[href^=#]').click(function() {
+    $('a.poplight').click(function(event) {
+    event.preventDefault();
+    event.stopPropagation();
     var popID = $(this).attr('rel'); //получаем имя окна, важно не забывать, при добавлении новых, менять имя в атрибуте rel ссылки
     var popURL = $(this).attr('href'); //получаем размер из href атрибута ссылки
  
