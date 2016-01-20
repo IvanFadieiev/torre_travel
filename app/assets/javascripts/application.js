@@ -124,3 +124,4 @@ $(document).ready(function(){
 
   $('.fotorama__nav.fotorama__nav--dots').remove();
 });
+
