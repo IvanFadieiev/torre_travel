@@ -28,12 +28,32 @@
     font-size: 19px;
   }
 }
-.fotorama{
+// !!!!!!!!!!!!!!!!!!!!torre-travels#show!!!!!!!!!!!!!!!!!!!!!!!!
+.share{
+    position:fixed;
+    bottom: 50px;
+    left: 40%;
+    width: 25%;
+    opacity:0.9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background:#eee 0 100%;
+    border:1px solid white;
+}
+.frame{
+z-index:10; 
+position:fixed;
+top: 20px;
+width: 62%;
+height: 50%;
+}
+body .content .fotorama{
     top:110px;
     width: 100%;
     position:absolute;
     z-index: 10;
 }
+
+// !!!!!!!!!!!!!!!!!!!!!frame in the main page!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .bg{
     z-index: 1;
     height:355px;
@@ -64,16 +84,41 @@ body div.content div div:nth-child(1) div.col-md-3 {opacity:0.9;box-shadow: 0 0 
     cursor: pointer;
 }
 
-body div.content div div:nth-child(1) div.col-md-3 div{
+body div.content div div:nth-child(1) div.description div{
     background: url(../img/b_f_reservado.png);
     height: 149px;
     width: 156px;
     background-size:cover;
-    margin-left: -16px;
+    margin-left: -1px;
     position:absolute;
     margin-top: -1px;
     opacity: 0.4;
 }
+
+
+
+
+
+
+
+
+.description{
+    position:fixed;
+    top: 130px;
+    right: 10px;
+    width: 25%;
+    opacity:0.9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background:#eee 0 100%;
+    border:1px solid white;
+}
+
+
+
+
+
+
+
 
 .left-col, .center-col, .right-col, #top{
     opacity:0.9;

@@ -136,7 +136,7 @@ div {
 .panel{
   margin-top: 130px;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000000;
   right: 0;
   width: 22%;
   background-color: #FFE173;
@@ -222,7 +222,7 @@ input, textarea, select, .uneditable-input {
 #primaryContent .portfolioBox p {color:#444;}
 
 //header
-#header {margin-top:-10px;height:120px;position:relative;background:#485558 url(../img/header-bg.png);border-bottom:3px solid #FEC300;}
+#header {z-index:100000; margin-top:-10px;height:120px;position:relative;background:#485558 url(../img/header-bg.png);border-bottom:3px solid #FEC300;}
 #header ul {position:absolute;right:10px;bottom:0px;}
 #header ul li {float:left;margin-left:4px;text-transform:uppercase;display: inline;text-shadow: black 2px 3px 4px;}
 #header ul li a {display:block;font-size:1.1em;font-weight:bold;padding:5px 12px 5px 12px;color:#ddd;}
@@ -230,8 +230,6 @@ input, textarea, select, .uneditable-input {
 
 //pagination
 .apple_pagination {
-// background: #f1f1f1;
-// border: 1px solid #e5e5e5;
 text-align: center;
 padding: 1em;
 cursor: default; }
