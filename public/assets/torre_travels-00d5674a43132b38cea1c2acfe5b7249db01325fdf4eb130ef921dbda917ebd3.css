@@ -1,0 +1,189 @@
+/* line 1, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+#top {
+  padding: 20px;
+  position: relative;
+}
+/* line 4, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+#top h1 {
+  padding: 0;
+  text-indent: 45px;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+/* line 20, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+#top #top-text {
+  padding: 0;
+  margin-left: 1%;
+  text-indent: 15px;
+  float: center;
+  width: 98%;
+  height: 100%;
+  line-height: 25px;
+  font-size: 19px;
+}
+
+/* line 32, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.share {
+  position: fixed;
+  bottom: 50px;
+  left: 40%;
+  width: 25%;
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #eee 0 100%;
+  border: 1px solid white;
+}
+
+/* line 42, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.frame {
+  z-index: 10;
+  position: fixed;
+  top: 20px;
+  width: 62%;
+  height: 50%;
+}
+
+/* line 49, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+body .content .fotorama {
+  top: 110px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+/* line 57, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.bg {
+  z-index: 1;
+  height: 355px;
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #eee 0 100%;
+  border: 1px solid white;
+  position: relative;
+  min-height: 200px;
+}
+
+/* line 67, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+#popup_name div center div a {
+  text-decoration: none;
+  cursor: default;
+  text-transform: uppercase;
+  display: inline;
+  text-shadow: black 1px 1px 1px;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 5px 12px 5px 12px;
+  color: #ddd;
+}
+
+/* line 68, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+#popup_name div center div a:hover {
+  color: #FEC300;
+  text-decoration: none;
+}
+
+/* line 72, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+body div.content div div:nth-child(2) div center div div ul {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  height: 100%;
+  background: #eee 0 100%;
+  border: 1px solid white;
+}
+
+/* line 73, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+body div.content div div:nth-child(1) div.col-md-3 {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  height: 100%;
+  background: #eee 0 100%;
+  border: 1px solid white;
+}
+
+/* line 74, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.poplight {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  height: 100%;
+  background: #eee 0 100%;
+  border: 1px solid white;
+}
+
+/* line 75, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+#primaryContent div div.reserved {
+  background: url(../img/b_f_reservado.png);
+  height: 149px;
+  width: 156px;
+  background-size: cover;
+  margin-left: 13px;
+  margin-right: 15px;
+  position: absolute;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+/* line 87, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+body div.content div div:nth-child(1) div.description div {
+  background: url(../img/b_f_reservado.png);
+  height: 149px;
+  width: 156px;
+  background-size: cover;
+  margin-left: -1px;
+  position: absolute;
+  margin-top: -1px;
+  opacity: 0.4;
+}
+
+/* line 98, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.description {
+  position: fixed;
+  top: 130px;
+  right: 10px;
+  width: 25%;
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #eee 0 100%;
+  border: 1px solid white;
+}
+
+/* line 109, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.left-col, .center-col, .right-col, #top {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #eee 0 100%;
+  border: 1px solid white;
+  position: relative;
+  min-height: 195px;
+}
+
+/* line 117, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.left-col, .center-col {
+  float: left;
+  width: 33.3333%;
+}
+
+/* line 121, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+.right-col {
+  float: right;
+  width: 33.33333%;
+}
+
+/* line 125, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+body div.content div.left-col div center div a {
+  text-decoration: none;
+  cursor: default;
+  text-transform: uppercase;
+  display: inline;
+  text-shadow: black 1px 1px 1px;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 5px 12px 5px 12px;
+  color: #ddd;
+}
+/* line 135, /home/iv/rails_projects/tor/app/assets/stylesheets/torre_travels.css.scss */
+body div.content div.left-col div center div a:hover {
+  color: #FEC300;
+  text-decoration: none;
+}
