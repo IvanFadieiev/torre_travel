@@ -1,4 +1,4 @@
 <%= commercial.phone %>
 <%= commercial.address%>
-<%= commercial.email %>
+<%= mail_to "#{commercial.email}",commercial.email,{:style=>'color:inherit; font-size:inherit; text-transform:lowercase'} %>
 <%= commercial.body %>

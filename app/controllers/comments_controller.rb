@@ -21,13 +21,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
-  def destroy
-    @comment = Comment.find(params[:id])
-    if @comment.destroy
-      redirect_to :back, notice: "Отзыв был успешно удален!"
-    end
-  end
-
   private
 
   def all_comments

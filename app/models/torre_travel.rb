@@ -5,8 +5,9 @@ class TorreTravel < ActiveRecord::Base
   enum distance: [:first_line, :second_line]
   enum reserved: [:reserv, :unreserv]
   validates :description, presence: true,
-                    length: { minimum: 5 }
+            length: { minimum: 5 }
   validates :description_es, presence: true,
-                    length: { minimum: 5 }
-  validates :price, presence: true                  
+            length: { minimum: 5 }
+  validates :price, presence: true
+  validates :housing, presence: true
 end

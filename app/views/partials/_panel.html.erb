@@ -1,16 +1,6 @@
 <div class="panel">
   <ul>
-    <li><a onclick="return false;">Поиск по ID</a></li>
-    <div class="search_id" style="display:none;margin:5px 35px 5px 0;">
-      <%= form_tag(torre_travel_path(:q), method: "get") do %>
-        <%= text_field_tag :q, params[:q], placeholder: "Введите ID..." %>
-      <% end %>
-    </div>
-    <li><%= link_to 'Новое жилье', new_path %></li>
-    <li><%= link_to 'Редактор жилья/фото', all_types_path%></li>
-    <li><%= link_to 'Редактор отзывов', comments_path%></li>
-    <li><%= link_to 'Редактор слайдера', new_slyder_path %></li>
-    <li><%= link_to 'Редактор рекламы', commercials_path %></li>
+    <li><%= link_to "Админка", rails_admin.dashboard_path%></li>
     <li><%= link_to "Выйти из админки", signout_path, method: "delete" %></li>
   </ul>
 </div>

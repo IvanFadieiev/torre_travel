@@ -57,13 +57,9 @@
           </span>
         </div>
       </li>
-      <%#= comment.email%>
       <div class="body_com">
         <%= raw render_emoji(comment.body, { :style => 'width:20px;' }) %>
       </div>
-        <%if signed_in?%>
-          <%=link_to 'Удалить',comment, method: :delete, data: { confirm: "точно?"}, :class => 'deleteAction' %>
-        <%end%>
       <%end%>
       <div class="apple_pagination">
         <%= will_paginate %>

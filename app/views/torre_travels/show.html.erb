@@ -55,25 +55,12 @@
         <strong>Адресс: </strong>
         <%= @torre_travel.address %>
       </p>
-      <%if signed_in?%>
-        | <%= link_to 'Правка', edit_torre_travel_path(@torre_travel) %> |
-        <%= link_to 'Удалить', @torre_travel, method: :delete, data: { confirm: 'Уверены?' } %> |
-        <%end%>
         <center>
          <a href="#?w=500" rel="popup_name" class="poplight" style="margin-bottom:20px;">Зарезервировать</a>
         </center>
     </div>
   </div>
-  <%if signed_in?%>
-    <div class="row1">
-      <div class="col-md-4 col-md-offset-4">
-        <%= form_for([@torre_travel, @torre_travel.images.build]) do |f| %>
-        <%= f.file_field :image_of_housing %>
-        <%= f.submit "Добавить рисунок" %>
-        <% end %>  
-      </div>
-    </div>
-  <%end%>
+  
 
   <div class="share">
     <center>

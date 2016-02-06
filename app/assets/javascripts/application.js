@@ -33,23 +33,12 @@ $(document).ready(function(){
     $(this).css({ opacity: 0.9 });
   });
 
-   $("select#torre_travel_housing ").click(function(){
-    var value = $(this).val();
-  if (value == "flat"){
-    $("div#distance").slideUp();
-    $("div#line").slideDown();
-  }
-  else{
-    $("div#distance").slideDown();
-    $("div#line").slideUp();;
-  }
-  });
-
+//добавление эмоджи в оего боди
    $("#new_comment div.emojis img").click(function(){
     var text = $(this).attr('alt');
      $('#comment_body').val($('#comment_body').val()+text);
   });
-
+// модальное окно//////////////////////////
     $('a.poplight').click(function(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -89,11 +78,6 @@ $(document).ready(function(){
     return false;
    });
 
-   $('body > div.panel > ul > li:nth-child(1)').click(function(){
-    $('body > div.panel > ul > div').toggle('slow');
-  });
-
-
   $('.scrollingtext').bind('marquee', function () {
     var ob = $(this);
     var tw = ob.width();
@@ -117,11 +101,11 @@ $(document).ready(function(){
       });
     });
   }).trigger('marquee');
-
+//при попадании на полоску резерв переходит по ссылке на хату
   $('#primaryContent div div.reserved').click(function(data){
     location = '/torre_travels/'+ $(this).attr("value");
   });
-
+//убрать точки фоторама
   $('.fotorama__nav.fotorama__nav--dots').remove();
 });
 
