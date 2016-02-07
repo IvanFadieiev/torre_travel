@@ -75,6 +75,7 @@ GEM
       simplecov (>= 0.3.8)
       yard (>= 0.7.0)
     emoji4rails (0.0.2)
+    enum_help (0.0.14)
     erubis (2.7.0)
     execjs (2.6.0)
     font-awesome-rails (4.5.0.0)
@@ -200,6 +201,8 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    russian (0.6.0)
+      i18n (>= 0.5.0)
     safe_yaml (1.0.4)
     sass (3.4.21)
     sass-rails (5.0.4)
@@ -257,8 +260,10 @@ DEPENDENCIES
   dynamic_form
   easy_captcha
   emoji4rails
+  enum_help
   fotorama-rails
   fotoramajs
+  i18n (~> 0.7.0)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.3)
@@ -269,6 +274,7 @@ DEPENDENCIES
   rails_admin
   rails_emoji
   rmagick (~> 2.15, >= 2.15.4)
+  russian (~> 0.6.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
