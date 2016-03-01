@@ -1,3 +1,4 @@
+# clss Torre travel
 class TorreTravelsController < ApplicationController
   before_action :set_torre_travel, only: [:show]
   before_action :all_torre_travels, only: [:index, :all_housings]

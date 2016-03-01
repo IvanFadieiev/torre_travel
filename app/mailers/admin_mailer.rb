@@ -1,6 +1,6 @@
+# class Admin Mailer
 class AdminMailer < ApplicationMailer
-
-  default from: "torretravel2015@gmail.com"
+  default from: 'torretravel2015@gmail.com'
 
   def torre_travel_destroyed(house)
     @torre_travel = house
@@ -16,13 +16,13 @@ class AdminMailer < ApplicationMailer
 
   def new_housing(torre_travel)
     @torre_travel = torre_travel
-    mail to: Comment.pluck(:email),
+    mail to: Comment.pluck(:email).uniq ,
          subject: "Новое жилье"
   end
 
   def edit_housing(torre_travel)
     @torre_travel = torre_travel
-    mail to: Comment.pluck(:email),
+    mail to: Comment.pluck(:email).uniq ,
          subject: "Жилье обновлено"
   end
 end
